@@ -1,0 +1,97 @@
+{
+  "name": "LabAcademyExcelPractice",
+  "description": "Blank Process",
+  "main": "Practice_Calculating Percentage of Expenses.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.10.3-beta.1504331]",
+    "UiPath.Mail.Activities": "[1.10.3-beta.1504335]",
+    "UiPath.System.Activities": "[21.4.0-beta.1503564]",
+    "UiPath.UIAutomation.Activities": "[21.4.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "34b1804a-d897-4160-87a8-af78b26ce38b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Practice DataTables.xaml",
+      "uniqueId": "e8457fac-7bc7-448c-9956-23cabb710699",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Practice  Calculate Sums.xaml",
+      "uniqueId": "84f6b9ec-1e21-472d-89de-c7478f7c6666",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Calculate Sums Solution 2.xaml",
+      "uniqueId": "45568af7-859b-4dc1-bc1b-9822d74eb5ff",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Calculate Sums Solution 3.xaml",
+      "uniqueId": "84a9e1f8-858c-4c3b-89ce-2439fe0478c3",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Practice_Calculating Percentage of Expenses.xaml",
+      "uniqueId": "6f8bcd89-a01a-4d23-80a0-b64c0bf1a514",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Practice_Calculating Loss Invoice.xaml",
+      "uniqueId": "829c973e-a338-4ccf-be69-3b37a7ce9cfb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ExcelDemo2.xaml",
+      "uniqueId": "a61e01c7-56b2-449b-a017-e00849d04bc9",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

@@ -1,0 +1,46 @@
+activity read range 
+to read content of excel file Data1.xlsx
+and store into variable data1
+*bottom right box value should be ""
+
+activity excel app scope read range
+to read content of excel file Data2.xls
+and store into variable data2
+*right box value should be ""
+
+activity filter data table #1
+use content inside data1 to filter out company founded before 2005,
+keep field name Company, Revenue, Founding Year
+and store in variable data1
+*field name impt, cannot type wrong, refer to excel file
+
+activity filter data table #2
+take content inside data2 to filter out company
+founder before 2005,
+keep field name Company Name, Revenue, Founding
+and store in variable data2
+*field name impt, cannot type wrong, refer to excel file
+
+activity build data table
+create a datatable to store the filtered content of data1 and data2 combined. using field name as Company, Revenue, Founding Year
+
+activity #1 for each loop
+loop through content of data1 and store into data3
+
+activity #2 for each loop
+loop through content of data2 and store into data3
+
+activity excel app scope
+to output the contend of data3 into an excel file
+
+
+
+
+expected result to see in excel file
+
+Company			Revenue	Founding Year
+ACME Corp		69$	1999
+ACME Heavy Industries	445$	1974
+BrainWorks Industries	123$	2003
+Military Industrial Inc.837$	1939
+Paradise Inc		753$	1998

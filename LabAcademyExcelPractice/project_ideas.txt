@@ -1,0 +1,30 @@
+Automation Challenge #1:
+
+
+1.create an inventory of 3 laptops from 3 vendors each from lazada
+
+2. search for any 3 lapstop from 3 vendors
+
+3. scrap data of each vendors
+<selectors>
+
+4. combine all vendors into 1 data table
+<excel n data tables>
+
+6. calculate total cost of inventory 
+<excel n data tables>
+
+7. field name as "vendor name", "item name", "Qty"
+<excel n data tables>
+
+8. indicate "Total Cost of inventory" in a cell
+<excel n data tables>
+
+9. output to an excel file with auto current month year format (Jan2021.xlsx) in filename
+<data type, control flow>
+
+10. send an email with the file attached
+<email>
+
+11. move the file to an "archive folder" differentiate by Year2021, Year 2022 etc... respectively
+<data type, control flow

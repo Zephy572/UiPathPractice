@@ -1,0 +1,19 @@
+total 35 expense items
+
+month 01
+$5542
+
+month 02 
+$3473 
+
+month 03 
+$4464 
+
+month 04 
+$3389 
+
+month 05
+$3515
+
+month 06
+$354
