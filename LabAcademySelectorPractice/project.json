@@ -1,12 +1,10 @@
 {
-  "name": "LabAcademyPDFEmailpractice",
+  "name": "LabAcademySelectorPractice",
   "description": "Blank Process",
-  "main": "testSendEmail.xaml",
+  "main": "Hightlight WFT type items.xaml",
   "dependencies": {
-    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.10.3-preview]",
     "UiPath.Mail.Activities": "[1.10.3-preview]",
-    "UiPath.PDF.Activities": "[3.4.0]",
     "UiPath.System.Activities": "[21.4.0-preview]",
     "UiPath.UIAutomation.Activities": "[21.4.1-preview]"
   },
@@ -14,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.4.0.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -45,19 +43,37 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "02501991-fecb-464e-8b9e-d11c9dfbacc0",
+      "uniqueId": "f5bc4a07-229a-42c8-823a-8dbe3710f955",
       "input": [],
       "output": []
     },
     {
-      "filePath": "Practice2_EmailAutomation.xaml",
-      "uniqueId": "9d71004a-7d1e-40a2-99e8-1fa66dbc38dc",
+      "filePath": "Set Data.xaml",
+      "uniqueId": "d516a47f-0c65-4069-8dd4-c9ed692996fe",
       "input": [],
       "output": []
     },
     {
-      "filePath": "testSendEmail.xaml",
-      "uniqueId": "3cb22282-33d0-4536-8cad-df489c0d97d5",
+      "filePath": "Demo 4.xaml",
+      "uniqueId": "5b18fef8-8716-4b2b-a3f7-3770e1825402",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Find Children.xaml",
+      "uniqueId": "de4d5eb0-b8ac-41e1-8cc9-92c242a9a7e1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "test scrapping data.xaml",
+      "uniqueId": "7542cc6e-3577-4ee9-912e-c1124b640ce4",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Hightlight WFT type items.xaml",
+      "uniqueId": "ee75eb96-2f71-4e65-886e-49eddb2e74c2",
       "input": [],
       "output": []
     }
