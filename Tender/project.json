@@ -1,18 +1,19 @@
 {
-  "name": "OrchestratorPractice",
-  "description": "Blank Process",
-  "main": "Main.xaml",
+  "name": "Tender",
+  "description": "Race Tender Project",
+  "main": "GeBiz_v4.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.10.3-preview]",
-    "UiPath.Mail.Activities": "[1.10.3-preview]",
-    "UiPath.System.Activities": "[21.4.0-preview]",
-    "UiPath.UIAutomation.Activities": "[21.4.1-preview]"
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.Mail.Activities": "[1.10.4]",
+    "UiPath.System.Activities": "[21.4.0]",
+    "UiPath.UIAutomation.Activities": "[21.4.3]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "21.4.0.0",
-  "projectVersion": "1.0.6",
+  "studioVersion": "21.4.3.0",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -42,8 +43,26 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
+      "filePath": "dataScrap.xaml",
+      "uniqueId": "d25c551e-50d3-4feb-8919-c56f81b1a110",
+      "input": [],
+      "output": []
+    },
+    {
       "filePath": "Main.xaml",
-      "uniqueId": "d335dd34-8d7f-4d55-a456-bfc3c7c1fedb",
+      "uniqueId": "64416ccf-4228-40fd-8844-dc485b7cadfd",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "data scrap.xaml",
+      "uniqueId": "1f652f0f-1c0d-4e87-b06a-6d3699b11128",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "GeBiz_v4.xaml",
+      "uniqueId": "15be146f-da27-4a7e-a2b3-13cff033675b",
       "input": [],
       "output": []
     }

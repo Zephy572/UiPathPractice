@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Calculating_Percentage_of_Expenses" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1683.2,3167.2" sap2010:WorkflowViewState.IdRef="Practice_Calculating_Percentage_of_Expenses_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Calculating_Percentage_of_Expenses" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="890.4,1157.6" sap2010:WorkflowViewState.IdRef="Practice_Calculating_Percentage_of_Expenses_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -65,16 +65,12 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Practice_Calculating_Percentage_of_Expenses" sap:VirtualizedContainerService.HintSize="380.8,2103.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practice_Calculating_Percentage_of_Expenses" sap:VirtualizedContainerService.HintSize="375.2,992.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="cardExpensesDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="cashExpensesDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="monthlyDT" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="months">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(of String)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="months" />
       <Variable x:TypeArguments="x:String" Name="expenseMonth" />
       <Variable x:TypeArguments="x:Int32" Name="monthlyTotal" />
       <Variable x:TypeArguments="x:Int32" Name="index" />
@@ -85,7 +81,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="read from excel file CardPayments.xlsx" DataTable="[cardExpensesDT]" DisplayName="Read CardPayments.xlsx" sap:VirtualizedContainerService.HintSize="339.2,96.8" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="CardPayments.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="read from excel file CardPayments.xlsx" DataTable="[cardExpensesDT]" DisplayName="Read CardPayments.xlsx" sap:VirtualizedContainerService.HintSize="333.6,96.8" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="CardPayments.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -94,7 +90,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="read from excel file CashPayments.xlsx" DataTable="[cashExpensesDT]" DisplayName="Read CashPayments.xlsx" sap:VirtualizedContainerService.HintSize="339.2,96.8" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="CashPayments.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="read from excel file CashPayments.xlsx" DataTable="[cashExpensesDT]" DisplayName="Read CashPayments.xlsx" sap:VirtualizedContainerService.HintSize="333.6,96.8" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="CashPayments.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -103,7 +99,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="read from cashExpensesDT the data of Expense,Date,Value and store in CardExpenseDT" DataTable="[cashExpensesDT]" DisplayName="For Each Row in cashExpensesDT" sap:VirtualizedContainerService.HintSize="339.2,128.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="read from cashExpensesDT the data of Expense,Date,Value and store in CardExpenseDT" DataTable="[cashExpensesDT]" DisplayName="For Each Row in cashExpensesDT" sap:VirtualizedContainerService.HintSize="333.6,128.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -158,7 +154,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <WriteLine sap2010:Annotation.AnnotationText="display the items that are added to CardExpenseDT" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,108" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row(&quot;Expense&quot;).ToString+ vbcr+&#xD;&#xA;row(&quot;Date&quot;).ToString + vbcr+&#xD;&#xA;expenseValue.ToString + vbcr+&#xD;&#xA;&quot; added to dataTable&quot;]">
+            <WriteLine sap2010:Annotation.AnnotationText="display the items that are added to CardExpenseDT" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,108" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row(&quot;Expense&quot;).ToString+ vbcr+&#xA;row(&quot;Date&quot;).ToString + vbcr+&#xA;expenseValue.ToString + vbcr+&#xA;&quot; added to dataTable&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -183,29 +179,29 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="create a dataTable with Expense, Date, Value, Percentage &amp; named as monthlyDT" DataTable="[monthlyDT]" DisplayName="Build monthlyDT" sap:VirtualizedContainerService.HintSize="339.2,128.8" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Expense&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Value&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Percentage&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="create a dataTable with Expense, Date, Value, Percentage &amp; named as monthlyDT" DataTable="[monthlyDT]" DisplayName="Build monthlyDT" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Expense&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Value&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Percentage&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through cardExpensesDT and extract months from date and store in List if its not already inside" DataTable="[cardExpensesDT]" DisplayName="For Each Row in cardExpensesDT" sap:VirtualizedContainerService.HintSize="339.2,128.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through cardExpensesDT and extract months from date and store in List if its not already inside" DataTable="[cardExpensesDT]" DisplayName="For Each Row in cardExpensesDT" sap:VirtualizedContainerService.HintSize="333.6,128.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,436.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ExpenseDate" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -216,7 +212,7 @@
                 <InArgument x:TypeArguments="x:String">[row.Item("Date").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="extract months from date" sap:VirtualizedContainerService.HintSize="262.4,91.2" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap2010:Annotation.AnnotationText="extract months from date&#xD;&#xA;string.remove :&#xD;&#xA;Returns a new string in which a specified number of characters in the current instance beginning at a specified position have been deleted.&#xD;&#xA;01.02.2021" sap:VirtualizedContainerService.HintSize="262.4,184" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ExpenseDate]</OutArgument>
               </Assign.To>
@@ -229,7 +225,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <If sap2010:Annotation.AnnotationText="check if month is already added to collection. store if not inside" Condition="[not months.Contains(ExpenseDate)]" sap:VirtualizedContainerService.HintSize="262.4,112.8" sap2010:WorkflowViewState.IdRef="If_3">
+            <If sap2010:Annotation.AnnotationText="check if month is already added to collection. store if not inside List variable named as Months" Condition="[not months.Contains(ExpenseDate)]" sap:VirtualizedContainerService.HintSize="262.4,128.8" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -238,21 +234,21 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="270.4,292.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence sap:VirtualizedContainerService.HintSize="271.2,292.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine sap2010:Annotation.AnnotationText="output &quot;Month XX is added to List" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,93.6" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Month &quot; + ExpenseDate + &quot; is added to List&quot;]">
+                  <WriteLine sap2010:Annotation.AnnotationText="output &quot;Month XX is added to List" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,93.6" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Month &quot; + ExpenseDate + &quot; is added to List&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </WriteLine>
-                  <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="store month into List collection" Collection="[months]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="228.8,66.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[ExpenseDate]">
+                  <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="store month into List collection" Collection="[months]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="229.6,66.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[ExpenseDate]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -273,17 +269,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ForEach x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="loop through lists of Months to calculate monthly total expenses. And then calculate % of monthly expense of each expenses" CurrentIndex="[index]" DisplayName="For Each item in months" sap:VirtualizedContainerService.HintSize="339.2,1230.4" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[months]">
+    <ui:ForEach x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="loop through lists of Months to calculate monthly total expenses. And then calculate % of monthly expense of each expenses" CurrentIndex="[index]" DisplayName="For Each item in months" sap:VirtualizedContainerService.HintSize="333.6,144.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[months]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,1036" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:ClearDataTable sap2010:Annotation.AnnotationText="clear monthlyDT for calculation for every new month " DataTable="[monthlyDT]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="262.4,82.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_2">
@@ -319,7 +315,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,895.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,1594.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="expenseName" />
                       <Variable x:TypeArguments="x:String" Name="expenseData" />
@@ -331,26 +327,26 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="get Name of expense" ColumnName="Expense" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="483.2,84" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
+                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="get Name of expense" ColumnName="Expense" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="483.2,219.2" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
                       <ui:GetRowItem.Value>
                         <OutArgument x:TypeArguments="x:String">[expenseName]</OutArgument>
                       </ui:GetRowItem.Value>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRowItem>
-                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="get Date of expense" ColumnName="Date" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="483.2,84" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
+                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="get Date of expense" ColumnName="Date" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="483.2,219.2" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
                       <ui:GetRowItem.Value>
                         <OutArgument x:TypeArguments="x:String">[expenseData]</OutArgument>
                       </ui:GetRowItem.Value>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -381,7 +377,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <If sap2010:Annotation.AnnotationText="if month in cardexpenseDT same as month in List, add data to monthlyTotal" Condition="[expenseMonth.Equals(item)]" sap:VirtualizedContainerService.HintSize="483.2,279.2" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If sap2010:Annotation.AnnotationText="if month in cardexpenseDT same as month in List, add data to monthlyTotal" Condition="[expenseMonth.Equals(item)]" sap:VirtualizedContainerService.HintSize="483.2,708" sap2010:WorkflowViewState.IdRef="If_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -390,14 +386,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,497.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine sap2010:Annotation.AnnotationText="tally each month expenses&#xD;&#xA;display &quot;month XX = monthlyTotal + Expenses&quot;" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;month &quot; + expenseMonth.ToString + &quot; = &quot;+ monthlyTotal.ToString+&quot; + &quot;+ expenseValue.ToString]">
+                          <WriteLine sap2010:Annotation.AnnotationText="tally each month expenses&#xA;display &quot;month XX = monthlyTotal + Expenses&quot;" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;month &quot; + expenseMonth.ToString + &quot; = &quot;+ monthlyTotal.ToString+&quot; + &quot;+ expenseValue.ToString]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -444,7 +440,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,340" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,426.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -459,16 +455,16 @@
                         <InArgument x:TypeArguments="x:Object">[(int32.Parse(row("Value").ToString)/monthlyTotal*100).ToString+"%"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,147.2" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,233.6" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[row(&quot;Percentage&quot;).ToString+ &quot;%&quot;]" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[row(&quot;Percentage&quot;).ToString+ &quot;%&quot;]" />
                         </Sequence>
                       </ui:CommentOut.Body>
                       <sap:WorkflowViewStateService.ViewState>
@@ -489,7 +485,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <If sap2010:Annotation.AnnotationText="if index  0 mean is 1st data from monthlyDT, hence use write range to write to excel fle&#xD;&#xA;&#xD;&#xA;else use append to update the excel file" Condition="[index=0]" sap:VirtualizedContainerService.HintSize="262.4,176.8" sap2010:WorkflowViewState.IdRef="If_5">
+            <If sap2010:Annotation.AnnotationText="if index  0 mean is 1st data from monthlyDT, hence use write range to write to excel fle&#xA;&#xA;else use append to update the excel file" Condition="[index=0]" sap:VirtualizedContainerService.HintSize="262.4,176.8" sap2010:WorkflowViewState.IdRef="If_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -516,8 +512,8 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>

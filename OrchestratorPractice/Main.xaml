@@ -56,18 +56,21 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="375.2,196.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="375.2,496.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="this is to test the activation of our Bots and Orchestrator setup" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;this is to test the activation of our Bots and Orchestrator setup.&quot;+&#xD;&#xA;vbCr+vbCr+&#xD;&#xA;&quot;It Works!!&quot;]">
+    <ui:MessageBox ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="this is to test the activation of our Bots and Orchestrator setup" Caption="Trim" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;UiPath Certification&quot;.Substring(6).Trim]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MessageBox>
+    <ui:MessageBox ChosenButton="{x:Null}" Caption="substrin(6)" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;UiPath Certification&quot;.Substring(6)]" />
+    <ui:MessageBox ChosenButton="{x:Null}" Caption="substring(6,14)" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;UiPath Certification&quot;.Substring(6,14)]" />
+    <ui:MessageBox ChosenButton="{x:Null}" Caption="substring(14,6)" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;UiPath Certification&quot;.Substring(14,6)]" />
   </Sequence>
 </Activity>
