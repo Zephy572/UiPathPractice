@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1402.4,8020" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1402.4,9862.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -86,17 +86,12 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xD;&#xA;&#xD;&#xA; open browser and load GeBiz website.&#xD;&#xA;&#xD;&#xA;login using singpass&#xD;&#xA;&#xD;&#xA;search for job opportunities using preset keywords&#xD;&#xA;&#xD;&#xA;compile data into an excel file&#xD;&#xA;&#xD;&#xA;email to preset recipents" sap:VirtualizedContainerService.HintSize="1061.6,7855.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xA;&#xA; open browser and load GeBiz website.&#xA;&#xA;login using singpass&#xA;&#xA;search for job opportunities using preset keywords&#xA;&#xA;compile data into an excel file&#xA;&#xA;email to preset recipents" sap:VirtualizedContainerService.HintSize="1061.6,9697.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="emailBody" />
-      <Variable x:TypeArguments="x:String" Name="keywordFileName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">userkeyword_list.xlsx</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="userkeyword_list.xlsx" Name="keywordFileName" />
       <Variable x:TypeArguments="sd:DataTable" Name="emailDT" />
       <Variable x:TypeArguments="ss:SecureString" Name="pwd" />
       <Variable x:TypeArguments="x:String" Name="username" />
@@ -108,17 +103,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1020,6769.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1020,8612" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="986.4,6552.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="986.4,8395.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="S8528893H" Name="singUsername" />
-              <Variable x:TypeArguments="ui:WorkbookApplication" Name="dataTable" />
               <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="data table to store preset keywords extracted from excel file" Name="keywordDT" />
+              <Variable x:TypeArguments="x:String" Name="singPassLogin">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">assessPass</Literal>
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,7 +124,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,338.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,260" sap2010:WorkflowViewState.IdRef="Sequence_24">
                   <sap:WorkflowViewStateService.ViewState>
@@ -143,14 +141,14 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,224" sap2010:WorkflowViewState.IdRef="CommentOut_2">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -171,12 +169,12 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,338.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,260" sap2010:WorkflowViewState.IdRef="Sequence_26">
                   <sap:WorkflowViewStateService.ViewState>
@@ -199,12 +197,13 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[singPassLogin]" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="944.8,80.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pwd]" Username="[username]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,399.2" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,320.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <sap:WorkflowViewStateService.ViewState>
@@ -212,7 +211,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Log in'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[singUsername]">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Log in'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[username]">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://saml.singpass.gov.sg/spservice/welcome" DesignTimeRectangle="1226, 791, 498, 74" ElementType="InputBox" FriendlyName="'INPUT SpLoginIdPw-singp…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfYAAABOCAYAAADSBTQQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAouSURBVHhe7d1nb9RKH4fh5/u/5g0SQkIC0XsXvYQiWgQECAJECb2GFlrwo9tn/z6TOfauU9hszH1Jo7C2157dSPlNs/lfIUmSOqM22Kemporx8fFibGysOHv2rMVisVgslhEpZDMZTVbXmRPsMzMz5cGTk5PF9PR0MTs729sjSZJGAdlMRpPVZDbZnZoT7P1aAJIkabTECHuqCnZ2kv6SJGnlILvTTnkV7CQ+XXtJkrRykN1pr70KdibjnVOXJGllIbvJ8FAFOyvtJEnSypNmuMEuSdIKZ7BLktQhBrskSR1isEuS1CEGuyRJHWKwS5LUIQa7JEkdYrBLktQhBrskSR1isEuS1CEGuyRJHWKwS5LUIQa7JEkdYrBLktQhBrskSR1isEuS1CEGuyRJHWKwS5LUIQa7JEkdYrBLktQhKybYf/36Vbx8+bIs/FuSJP3Xign2iYmJYtWqVWW5fv16b6skSUotS7D//v27ePv2bXHhwoVi9+7dVeH1u3fvekfNdenSpSrYOY5zaPkxenL37t3iypUr5c90NOX9+/fl9rpy9erV4tGjR8XXr197R0uSlsLQg/3Hjx/F+fPnq5DOy+rVq8s//PlwOyGxffv2YsuWLeVwvEbDz58/ixMnTpS/O37yOjx79uw/v9+88Ps+duxY8fHjx967JEmLMfRgHx8fr/6o79mzp7hz507x+PHjMuzXrFlT7WO7Rl/bYD916tScHvvY2FixefPmav+6deuK+/fv994pSVqooQb7ly9fyiF3/pAfOXKk+P79e2/PP54+fVr+gWc/oT8zM9Pb88+QL68paW9+dna2+PbtW7k9QoVRAXr1U1NT5U9et8G56DnyPgr/jiF/zt32+uCz8nk4D6MNHNcG30ld3alHXCf/3gL1ev36dW39m6TfFfWl3vPRNtj5d466vXjxohyJ4Rh+99RBkrRwQw12Am7Tpk3lH/GbN2/2tv6LYKKnTo+Onn0aMk0hkZ7z1q1b5cK6tOdP4fXly5fnhE7uyZMn5TB/+j7Kjh07iufPn5f1im1N15+cnCzXCBw4cKA6NsrGjRvLHmlT0BLY586dK4em0/dRd9YXENI0dtiWByjf240bN6pGUVqi/jkCnbUK+XdFof58rjYWE+yB72zr1q3VtWnASJIWZtmCfb4L4NoE+9q1a6tj6grDwXXhTiDngZoWAvPQoUPV66brHz58uFi/fn11XF64BovG8t47DZj9+/fXvifKvn37quvkAZpOb3ANwjytB/WnVx5oCPA7jv2E+86dO+c0DOhFt5n3XopgR3rXw4MHD3pbJUnzNdRgpycWvdkIuaZh5VybYKccP3686unTcCDQYvifa9IzT7E/Ao2f9MwjnPjJ6zys+10/zhFD6JyDnnqcgzqwpiDkIUvjYHp6ure3KP/NtEXsp6QBSvhu27at3H706NFqlTmfnevEZztz5kx5Lbx69apqBLG2IepKg4O6U0f20WAYhHosRbCn3yN1mk+jT5L0r6EGO9J5dAq9RYKLW6X6ze+2CXZ6vXW3T6XhnYYGQUfgsT0P3FRe56brc46HDx/29syVnoMAjjBNQ7Zu3QE49uTJk9X10wBNr5/f38/nYxifhg0NnhjiTr/LvL5cn5GNuP0wGgNNlirYqdvevXtrzyNJam/owQ7CrG4emsJ29ueaQiINNubR6xCM0etNQ+Pz58/lEDTb07DNEW6nT58eeP1+56AxEbf5sRr8w4cP5XbWGrCtbjQhxSKzaACkn4HGUIxIUA8aJ4MW6vEMgQ0bNpTv4b00fBbaQ16qYE/Pky+clCS1tyzBHggl5reZv04XcfFvevCpNsHOueo0hc+bN2+qIfJBw85tFs8NOgf1S8+Rhj3D6f3mtBmJiADPAzRfI8DIAA0RVrqnxwWCnwWKcTyF74EeOiHfdgU/mr5bNP3O6qSNL342NZAkSf0ta7Cn+ENOeMZwNQvA0qBrConFBHt6zqb3hjyUQ5vrh/wcab0G9VLZ17QqHoxy0EBKA57C98mK+XxInUYFvftdu3bNOZ4yaAV/qum7RdPvrE46esK0w6ApAElSvZEJ9kAI1YVBU0gsJtjT9168eLHc1iSGzPtdv2kqIESvn/CNW9DiUbmEadPjdJEGX12wB+aqCWzmydNREBYqNgU1IyesRGfhXjQM+JmPmtRZqmBnGiKuXXcrpCSpnaEGOyEYTx5rWmTWFAZN2xcT7GkvuN/90ywoi2Hiftfvdw5GJJiD57h02D3txfd78hphHcHXL9hTDN/HNWkU0DgYhLn/+E7aDIkvRbBzDRb3cRxz/6wBkCQtzFCDndCIx4iyArpuFfy1a9fK/cz5Mgce/kSwI65HocGRzy/Ty01vAaM0Xb/pHKBucY70Hn5uZ4uHs/CzrtdOIKf3uaefgdX2sZ3RjlyMElBH6ppuo9Q1sBi9YF+bRWyLDXZCnQfzxHH9RhYkSYMNNdiZN+Xc8UecoV/Cm/D49OlT+Uc9ho85Lp1n/VPBTs85HmlKYX436kRDhGeap6FO6RfslH7nqAvv9AEznIvgpdFDj5vgzZ+Il36GdFU88+m8l1EDApPh7Wg0HDx4sLqVLl0Vz/X4X9Y4nvfdu3evWueQ3vvepG2wcw2+Dwqfi0V6fG6mIOIYrjdohECS1N9Qgx0EUfoUt7pC7zTvzf+pYAfz3Xk4p4XgJ5zjddP16enGvdh1hcCsexY6YRar4+sKjQJCjwWFvM4/Q36ffV7qrpuOINSVptGDXNtg71dozHEPvgvmJGnxhh7sIMhu375d9Saj0HtjOLmu1/Yngx2MGBCe+W13BC49TM4d2/tdn7rTE02DlgAd9F+TMnzPHHuEdxReM79OHfqtiufczFOn9ac0PRcAdSvp29Q1tdBgZ6qFERu+M3rxkqSlsSzBniII+MM+KkOw9BqpD8PS6Vx522APvJdzcK759kQZMl/odxL1p9Q1YOrE72AhdZUkjZZlD/blRngSaHmQ52IePL8trc2IgSRJw/LXB3v0xBmCZsi7DsPgsSo9XYQGg12SNEr++mBPg5l5X1ahpz13FvHFPdZ14W2wS5JGyV8f7OAJa/miOR7oki/u4za2fN7bYJckjRKDvYdb3mLVeV4IeubY6xajGeySpFFisCd44hm3eTHXTpBPTEyUD1Lptzo9Xf3edhW6JEl/isEuSVKHGOySJHWIwS5JUocY7JIkdYjBLklShxjskiR1iMEuSVKHGOySJHWIwS5JUocY7JIkdYjBLklShxjskiR1iMEuSVKHGOySJHWIwS5JUofUBvvY2Fj5/4xLkqSVg+wmw0MV7OPj48X09HTvlSRJWgnIbjI8VME+NTVVTE5O9l5JkqSVgOwmw0MV7CDx052SJGl0kdlpbx1zgn1mZqY8gPSna++cuyRJo4VsJqPJajKb7E7NCfYQLQAm41lpZ7FYLBaLZTQK2dxvhL022CVJ0spksEuS1CEGuyRJnVEU/wcGdog6epV/VAAAAABJRU5ErkJggg==" InformativeScreenshot="afbb3237fe0ca5d95cf648c20a5b37df.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Singpass login' /&gt;" SearchSteps="FuzzySelector, Image">
                         <uix:TargetAnchorable.Anchors>
@@ -227,12 +226,12 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,399.2" sap2010:WorkflowViewState.IdRef="CommentOut_5">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,320.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                   <sap:WorkflowViewStateService.ViewState>
@@ -240,7 +239,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Log in'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" Text="04&amp;sx1236$D">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Log in'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" SecureText="[pwd]">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://saml.singpass.gov.sg/spservice/welcome" DesignTimeRectangle="1226, 882, 498, 74" ElementType="InputBoxPassword" FriendlyName="'INPUT SpLoginIdPw-passw…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="64eacccd545b6c10be28692eace8d2af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Singpass login' /&gt;" SearchSteps="FuzzySelector, Image">
                         <uix:TargetAnchorable.Anchors>
@@ -255,7 +254,7 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -288,7 +287,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="944.8,338.4" sap2010:WorkflowViewState.IdRef="CommentOut_9">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,260" sap2010:WorkflowViewState.IdRef="Sequence_32">
                   <sap:WorkflowViewStateService.ViewState>
@@ -305,7 +304,7 @@
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -322,13 +321,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadRange>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="944.8,5649.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="944.8,5650.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="911.2,5496" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="911.2,5496.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="search keyword" Name="keyWord" />
                     </Sequence.Variables>
@@ -375,7 +374,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="869.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;start scrapping data for keyword = &quot; + keyWord]" />
-                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="869.6,4981.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="869.6,4982.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="store unprocess data scrapped from website" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                         <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
