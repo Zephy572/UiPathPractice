@@ -1,7 +1,7 @@
 {
   "name": "Tender",
   "description": "Race Tender Project",
-  "main": "GeBiz_v4.xaml",
+  "main": "GeBiz_v5.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -13,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.4.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -63,6 +63,12 @@
     {
       "filePath": "GeBiz_v4.xaml",
       "uniqueId": "15be146f-da27-4a7e-a2b3-13cff033675b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "GeBiz_v5.xaml",
+      "uniqueId": "d784582a-f832-4f85-9b97-f291f732087b",
       "input": [],
       "output": []
     }
