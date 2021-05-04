@@ -96,7 +96,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xA;&#xD;&#xA;open browser and load GeBiz website.&#xA;&#xA;login using singpass read from Orchestrator Asset&#xA;&#xA;search for job opportunities using preset keywords read from an excel file template&#xD;&#xA;&#xD;&#xA;download relevant files and sort accordingly&#xD;&#xA;&#xA;compile relevant data into an excel file&#xA;&#xA;email to preset recipents using an excel file template" DisplayName="GeBiz Tenders Automation" sap:VirtualizedContainerService.HintSize="1799.2,24946.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xA;&#xD;&#xA;open browser and load GeBiz website.&#xA;&#xA;login using singpass read from Orchestrator Asset&#xA;&#xA;search for job opportunities using preset keywords read from an excel file template&#xD;&#xA;&#xD;&#xA;download relevant files and sort accordingly&#xD;&#xA;&#xA;compile relevant data into an excel file&#xA;&#xA;email to preset recipents using an excel file template" DisplayName="GeBiz Tenders Automation" sap:VirtualizedContainerService.HintSize="1799.2,24985.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="emailBody" />
       <Variable x:TypeArguments="sd:DataTable" Name="emailDT" />
@@ -120,13 +120,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1757.6,22236.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1757.6,22276" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1724,21980" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1724,22019.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="data table to store preset keywords extracted from excel file" Name="keywordDT" />
               <Variable x:TypeArguments="x:String" Name="singPassLogin" />
@@ -289,13 +289,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each search keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1682.4,19613.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each search keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1682.4,19652.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1648.8,19460" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1648.8,19499.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="search keyword" Name="keyWord" />
                     </Sequence.Variables>
@@ -349,7 +349,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1607.2,18656" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1607.2,18695.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="store unprocess data scrapped from website" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                         <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="general purpoe counting use" Default="0" Name="counter" />
@@ -397,7 +397,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:RetryScope>
-                      <If sap2010:Annotation.AnnotationText="if search result is not zero, then check which tab is selected. If Close tab is selected, click Open tab." Condition="[getOpenText=&quot;Open (0)&quot;]" DisplayName="If search result not zero, start data scrapping" sap:VirtualizedContainerService.HintSize="1565.6,18117.6" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If sap2010:Annotation.AnnotationText="if search result is not zero, then check which tab is selected. If Close tab is selected, click Open tab." Condition="[getOpenText=&quot;Open (0)&quot;]" DisplayName="If search result not zero, start data scrapping" sap:VirtualizedContainerService.HintSize="1565.6,18156.8" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -415,7 +415,7 @@
                           </ui:LogMessage>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap2010:Annotation.AnnotationText="check element OPEN exist means Open tab is selected&#xA;if yes,  scrap data &#xA;else , click on Open tab" sap:VirtualizedContainerService.HintSize="1188,17925.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence sap2010:Annotation.AnnotationText="check element OPEN exist means Open tab is selected&#xA;if yes,  scrap data &#xA;else , click on Open tab" sap:VirtualizedContainerService.HintSize="1188,17964.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="folderPath" />
                             </Sequence.Variables>
@@ -815,13 +815,30 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:AddDataColumn>
-                            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="add column POC Tel" ColumnName="POC Tel" DataTable="[FinalDT]" DisplayName="Add Data Column POC Tel" sap:VirtualizedContainerService.HintSize="1146.4,53.6" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1146.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_45">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,146.4" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="add column POC Tel" ColumnName="POC Tel" DataTable="[FinalDT]" DisplayName="Add Data Column POC Tel" sap:VirtualizedContainerService.HintSize="200,53.6" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:AddDataColumn>
+                                </Sequence>
+                              </ui:CommentOut.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ui:AddDataColumn>
+                            </ui:CommentOut>
                             <Assign sap2010:Annotation.AnnotationText="reset counter" DisplayName="Assign: general purpose counter" sap:VirtualizedContainerService.HintSize="1146.4,92.8" sap2010:WorkflowViewState.IdRef="Assign_10">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
@@ -969,13 +986,13 @@
                                 <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[folderPath]" />
                               </If.Then>
                             </If>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each Reference Number and download the files in them" DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,10135.2" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each Reference Number and download the files in them" DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,10175.2" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112.8,9981.6" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112.8,10021.6" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="tenderNo" />
                                       <Variable x:TypeArguments="x:String" Name="jobTitle" />
@@ -1045,7 +1062,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:Click>
-                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1071.2,1114.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1071.2,1154.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1070,7 +1087,7 @@
                                         </ui:GetAttribute>
                                       </TryCatch.Try>
                                       <TryCatch.Catches>
-                                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,666.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,706.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1409,7 +1426,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[haveSiteBriefing]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">no</InArgument>
+                                                <InArgument x:TypeArguments="x:String">No</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;Site Briefing = &quot; + haveSiteBriefing]">
@@ -1571,7 +1588,7 @@
                                               <OutArgument x:TypeArguments="x:Object">[Row("Compulsary")]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:Object">[isMandatory]</InArgument>
+                                              <InArgument x:TypeArguments="x:Object">["N.A"]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                         </If.Then>
@@ -1598,7 +1615,7 @@
                                               <OutArgument x:TypeArguments="x:Object">[Row("Briefing Date")]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:Object">[briefingDate]</InArgument>
+                                              <InArgument x:TypeArguments="x:Object">["N.A"]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                         </If.Then>
