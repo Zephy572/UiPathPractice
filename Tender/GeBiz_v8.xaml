@@ -96,7 +96,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xA;&#xD;&#xA;open browser and load GeBiz website.&#xA;&#xA;login using singpass read from Orchestrator Asset&#xA;&#xA;search for job opportunities using preset keywords read from an excel file template&#xD;&#xA;&#xD;&#xA;download relevant files and sort accordingly&#xD;&#xA;&#xA;compile relevant data into an excel file&#xA;&#xA;email to preset recipents using an excel file template" DisplayName="GeBiz Tenders Automation" sap:VirtualizedContainerService.HintSize="1799.2,24158.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="automation summary:&#xA;&#xD;&#xA;open browser and load GeBiz website.&#xA;&#xA;login using singpass read from Orchestrator Asset&#xA;&#xA;search for job opportunities using preset keywords read from an excel file template&#xD;&#xA;&#xD;&#xA;download relevant files and sort accordingly&#xD;&#xA;&#xA;compile relevant data into an excel file&#xA;&#xA;email to preset recipents using an excel file template" DisplayName="GeBiz Tenders Automation" sap:VirtualizedContainerService.HintSize="1799.2,24946.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="emailBody" />
       <Variable x:TypeArguments="sd:DataTable" Name="emailDT" />
@@ -120,13 +120,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1757.6,21448.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: GeBIZ | Home" sap:VirtualizedContainerService.HintSize="1757.6,22236.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1724,21192" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1724,21980" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="data table to store preset keywords extracted from excel file" Name="keywordDT" />
               <Variable x:TypeArguments="x:String" Name="singPassLogin" />
@@ -289,13 +289,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each search keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1682.4,18825.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each search keyword " DataTable="[keywordDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1682.4,19613.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1648.8,18672" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1648.8,19460" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="search keyword" Name="keyWord" />
                     </Sequence.Variables>
@@ -349,7 +349,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1607.2,17868" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1607.2,18656" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="store unprocess data scrapped from website" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                         <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="general purpoe counting use" Default="0" Name="counter" />
@@ -397,7 +397,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:RetryScope>
-                      <If sap2010:Annotation.AnnotationText="if search result is not zero, then check which tab is selected. If Close tab is selected, click Open tab." Condition="[getOpenText=&quot;Open (0)&quot;]" DisplayName="If search result not zero, start data scrapping" sap:VirtualizedContainerService.HintSize="1565.6,17329.6" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If sap2010:Annotation.AnnotationText="if search result is not zero, then check which tab is selected. If Close tab is selected, click Open tab." Condition="[getOpenText=&quot;Open (0)&quot;]" DisplayName="If search result not zero, start data scrapping" sap:VirtualizedContainerService.HintSize="1565.6,18117.6" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -415,7 +415,7 @@
                           </ui:LogMessage>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap2010:Annotation.AnnotationText="check element OPEN exist means Open tab is selected&#xA;if yes,  scrap data &#xA;else , click on Open tab" sap:VirtualizedContainerService.HintSize="1188,17137.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence sap2010:Annotation.AnnotationText="check element OPEN exist means Open tab is selected&#xA;if yes,  scrap data &#xA;else , click on Open tab" sap:VirtualizedContainerService.HintSize="1188,17925.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="folderPath" />
                             </Sequence.Variables>
@@ -509,7 +509,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NExtractData>
-                            <ui:CommentOut sap2010:Annotation.AnnotationText="output unprocessed scrapped daata to excel file for view/debug purpose only." DisplayName="Comment Out: For Debug purpose only" sap:VirtualizedContainerService.HintSize="1146.4,331.2" sap2010:WorkflowViewState.IdRef="CommentOut_21">
+                            <ui:CommentOut sap2010:Annotation.AnnotationText="output unprocessed scrapped daata to excel file for view/debug purpose only." DisplayName="Comment Out: For Debug purpose only" sap:VirtualizedContainerService.HintSize="1146.4,371.2" sap2010:WorkflowViewState.IdRef="CommentOut_21">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -835,19 +835,19 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="trim Reference Number and also calculate number of search results " DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,740" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="trim Reference Number and also calculate number of search results " DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,746.4" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,588" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,592.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap2010:Annotation.AnnotationText="take out Tender - " sap:VirtualizedContainerService.HintSize="435.2,91.2" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign sap2010:Annotation.AnnotationText="take out Tender - " sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="Assign_3">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Object">[row(0)]</OutArgument>
                                       </Assign.To>
@@ -860,7 +860,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
-                                    <Assign sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign sap:VirtualizedContainerService.HintSize="435.2,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
                                       </Assign.To>
@@ -935,7 +935,7 @@
                                 <OutArgument x:TypeArguments="x:String">[monitoredFolder]</OutArgument>
                               </ui:ReadCell.Result>
                             </ui:ReadCell>
-                            <Assign sap2010:Annotation.AnnotationText="formulate where to store downloaded files. Check Default Values in variable panel" sap:VirtualizedContainerService.HintSize="1146.4,120" sap2010:WorkflowViewState.IdRef="Assign_29">
+                            <Assign sap2010:Annotation.AnnotationText="formulate where to store downloaded files. Check Default Values in variable panel" sap:VirtualizedContainerService.HintSize="1146.4,121.6" sap2010:WorkflowViewState.IdRef="Assign_29">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[folderPath]</OutArgument>
                               </Assign.To>
@@ -957,7 +957,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:PathExists>
-                            <If sap2010:Annotation.AnnotationText="create Tender Document folder if not exist" Condition="[getExist=False]" DisplayName="If: create Tender Doucument folder if not exist" sap:VirtualizedContainerService.HintSize="1146.4,291.2" sap2010:WorkflowViewState.IdRef="If_9">
+                            <If sap2010:Annotation.AnnotationText="create Tender Document folder if not exist" Condition="[getExist=False]" DisplayName="If: create Tender Doucument folder if not exist" sap:VirtualizedContainerService.HintSize="1146.4,292.8" sap2010:WorkflowViewState.IdRef="If_9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -969,13 +969,13 @@
                                 <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[folderPath]" />
                               </If.Then>
                             </If>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each Reference Number and download the files in them" DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,9396.8" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="loop through each Reference Number and download the files in them" DataTable="[FinalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1146.4,10135.2" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112.8,9243.2" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112.8,9981.6" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="tenderNo" />
                                       <Variable x:TypeArguments="x:String" Name="jobTitle" />
@@ -1045,7 +1045,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:Click>
-                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1071.2,1112.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1071.2,1114.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1070,7 +1070,7 @@
                                         </ui:GetAttribute>
                                       </TryCatch.Try>
                                       <TryCatch.Catches>
-                                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,664.8" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,666.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1081,7 +1081,7 @@
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                             </ActivityAction.Argument>
-                                            <Sequence sap2010:Annotation.AnnotationText="search each Reference Number, click the link to assess more details." DisplayName="Sequence: search each Reference Number " sap:VirtualizedContainerService.HintSize="375.2,594.4" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                            <Sequence sap2010:Annotation.AnnotationText="search each Reference Number, click the link to assess more details." DisplayName="Sequence: search each Reference Number " sap:VirtualizedContainerService.HintSize="375.2,596" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1192,7 +1192,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NGetText>
-                                    <If sap2010:Annotation.AnnotationText="check procurement method" Condition="[procurementMethod = &quot;Tender No.&quot;]" sap:VirtualizedContainerService.HintSize="1071.2,581.6" sap2010:WorkflowViewState.IdRef="If_15">
+                                    <If sap2010:Annotation.AnnotationText="check procurement method" Condition="[procurementMethod = &quot;Tender No.&quot;]" sap:VirtualizedContainerService.HintSize="1071.2,586.4" sap2010:WorkflowViewState.IdRef="If_15">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1201,14 +1201,14 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,391.2" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,394.4" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_44">
+                                          <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_44">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:String">[procurementMethod]</OutArgument>
                                             </Assign.To>
@@ -1238,7 +1238,7 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <If Condition="[procurementMethod = &quot;Quotation No.&quot;]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_14">
+                                        <If Condition="[procurementMethod = &quot;Quotation No.&quot;]" sap:VirtualizedContainerService.HintSize="652,316.8" sap2010:WorkflowViewState.IdRef="If_14">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1246,13 +1246,13 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_105">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_45">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:String">[procurementMethod]</OutArgument>
                                                 </Assign.To>
@@ -1263,14 +1263,14 @@
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_106">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_46">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:String">[procurementMethod]</OutArgument>
                                                 </Assign.To>
@@ -1479,7 +1479,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <ui:CommentOut sap2010:Annotation.AnnotationText="unable to successfully get text Telephone" DisplayName="Comment Out: Get Person Telephone" sap:VirtualizedContainerService.HintSize="1071.2,96.8" sap2010:WorkflowViewState.IdRef="CommentOut_42">
+                                    <ui:CommentOut sap2010:Annotation.AnnotationText="unable to successfully get text Telephone" DisplayName="Comment Out: Get Person Telephone" sap:VirtualizedContainerService.HintSize="1071.2,369.6" sap2010:WorkflowViewState.IdRef="CommentOut_42">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,260" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -1506,12 +1506,12 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out: For Debug purpose only" sap:VirtualizedContainerService.HintSize="1071.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_43">
+                                    <ui:CommentOut DisplayName="Comment Out: For Debug purpose only" sap:VirtualizedContainerService.HintSize="1071.2,264" sap2010:WorkflowViewState.IdRef="CommentOut_43">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_111">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -1531,11 +1531,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <Sequence sap2010:Annotation.AnnotationText="Assign addition new data into FinalDT" DisplayName="Sequence: Assign data to FinalDT" sap:VirtualizedContainerService.HintSize="1071.2,1172" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                    <Sequence sap2010:Annotation.AnnotationText="Assign addition new data into FinalDT" DisplayName="Sequence: Assign data to FinalDT" sap:VirtualizedContainerService.HintSize="1071.2,1350.4" sap2010:WorkflowViewState.IdRef="Sequence_112">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1629,7 +1629,7 @@
                                           <InArgument x:TypeArguments="x:Object">[contactPersonEmail]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="568.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_44">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="568.8,231.2" sap2010:WorkflowViewState.IdRef="CommentOut_44">
                                         <ui:CommentOut.Body>
                                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_117">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -1650,7 +1650,7 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:CommentOut>
@@ -1666,7 +1666,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:UiElementExists>
-                                    <If sap2010:Annotation.AnnotationText="if title  exist, click button to download all the files" Condition="[getExist=True]" DisplayName="If any Document eg Tender/Quotation etc exist" sap:VirtualizedContainerService.HintSize="1071.2,2248.8" sap2010:WorkflowViewState.IdRef="If_17">
+                                    <If sap2010:Annotation.AnnotationText="if title  exist, click button to download all the files" Condition="[getExist=True]" DisplayName="If any Document eg Tender/Quotation etc exist" sap:VirtualizedContainerService.HintSize="1071.2,2318.4" sap2010:WorkflowViewState.IdRef="If_17">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1675,7 +1675,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence sap2010:Annotation.AnnotationText="click download button &amp; classify according to reference number" DisplayName="Sequence: download files n classify them into folder" sap:VirtualizedContainerService.HintSize="758.4,2036.8" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                                        <Sequence sap2010:Annotation.AnnotationText="click download button &amp; classify according to reference number" DisplayName="Sequence: download files n classify them into folder" sap:VirtualizedContainerService.HintSize="829.6,2106.4" sap2010:WorkflowViewState.IdRef="Sequence_114">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:Boolean" Name="fileReady" />
                                           </Sequence.Variables>
@@ -1685,7 +1685,7 @@
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:GetLastDownloadedFile Timeout="{x:Null}" sap2010:Annotation.AnnotationText="Note: Need to allow browser to download multiple files&#xA;&#xA;monitored folder - default path for folder Downloads, preset in Default values in variable panel&#xA;&#xA;downloaded file - name of file downloaded&#xA;" DisplayName="Wait for Download" DownloadFolder="[monitoredFolder]" File="[downloadedFile]" sap:VirtualizedContainerService.HintSize="716.8,697.6" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_3">
+                                          <ui:GetLastDownloadedFile Timeout="{x:Null}" sap2010:Annotation.AnnotationText="Note: Need to allow browser to download multiple files&#xA;&#xA;monitored folder - default path for folder Downloads, preset in Default values in variable panel&#xA;&#xA;downloaded file - name of file downloaded&#xA;" DisplayName="Wait for Download" DownloadFolder="[monitoredFolder]" File="[downloadedFile]" sap:VirtualizedContainerService.HintSize="788,697.6" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_3">
                                             <ui:GetLastDownloadedFile.Body>
                                               <ActivityAction>
                                                 <Sequence sap2010:Annotation.AnnotationText="default path is downloaded to Download" DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,364" sap2010:WorkflowViewState.IdRef="Sequence_113">
@@ -1732,44 +1732,45 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:GetLastDownloadedFile>
-                                          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder: according to Reference Number" sap:VirtualizedContainerService.HintSize="716.8,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[monitoredFolder+&quot;\Tender Documents\&quot;+Row(&quot;Reference Number&quot;).ToString]" />
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="716.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;filename = &quot; + downloadedFile.ToString + vbcr+&#xD;&#xA;&quot;Move From path = &quot; + monitoredFolder+&quot;\&quot;+downloadedFile.ToString + vbcr +&#xD;&#xA;&quot;To path = &quot; + monitoredFolder+&quot;\Tender Documents\&quot; + Row(&quot;Reference Number&quot;).ToString]" />
-                                          <ui:InterruptibleDoWhile DisplayName="Do While: waiting loop for file to complete downloading" sap:VirtualizedContainerService.HintSize="716.8,618.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                                            <ui:InterruptibleDoWhile.Body>
-                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="681.6,451.2" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                                          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder: according to Reference Number" sap:VirtualizedContainerService.HintSize="788,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[monitoredFolder+&quot;\Tender Documents\&quot;+Row(&quot;Reference Number&quot;).ToString]" />
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="788,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;filename = &quot; + downloadedFile.ToString + vbcr+&#xD;&#xA;&quot;Move From path = &quot; + monitoredFolder+&quot;\&quot;+downloadedFile.ToString + vbcr +&#xD;&#xA;&quot;To path = &quot; + monitoredFolder+&quot;\Tender Documents\&quot; + Row(&quot;Reference Number&quot;).ToString]" />
+                                          <If sap2010:Annotation.AnnotationText="if contains &quot;zip&quot; or &quot;pdf&quot; means download completed. &#xD;&#xA;else loop n wait" Condition="[downloadedFile.ToString.Contains(&quot;.zip&quot;) or downloadedFile.ToString.Contains(&quot;.pdf&quot;)]" DisplayName="If : check File download completed or still downloading" sap:VirtualizedContainerService.HintSize="788,688" sap2010:WorkflowViewState.IdRef="If_18">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If.Then>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;file downloaded&quot;]" />
+                                            </If.Then>
+                                            <If.Else>
+                                              <ui:InterruptibleDoWhile DisplayName="Do While: waiting loop for file to complete downloading" sap:VirtualizedContainerService.HintSize="410.4,483.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                                <ui:InterruptibleDoWhile.Body>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,316" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;downloading in progress...&quot;]" />
+                                                    <ui:PathExists DisplayName="Path Exists: return True when file exist" Exists="[fileReady]" sap:VirtualizedContainerService.HintSize="333.6,90.4" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[downloadedFile.ToString]" PathType="File" />
+                                                  </Sequence>
+                                                </ui:InterruptibleDoWhile.Body>
+                                                <ui:InterruptibleDoWhile.Condition>
+                                                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="fileReady=False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                                                </ui:InterruptibleDoWhile.Condition>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Delay DisplayName="Delay of 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="640,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                                <If sap2010:Annotation.AnnotationText="if contains &quot;zip&quot; means download completed. &#xD;&#xA;else loop n wait" Condition="[downloadedFile.ToString.Contains(&quot;.zip&quot;) or downloadedFile.ToString.Contains(&quot;.pdf&quot;)]" DisplayName="If : check File download completed or still downloading" sap:VirtualizedContainerService.HintSize="640,296" sap2010:WorkflowViewState.IdRef="If_18">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <If.Then>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_58">
-                                                      <Assign.To>
-                                                        <OutArgument x:TypeArguments="x:Boolean">[fileReady]</OutArgument>
-                                                      </Assign.To>
-                                                      <Assign.Value>
-                                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                      </Assign.Value>
-                                                    </Assign>
-                                                  </If.Then>
-                                                  <If.Else>
-                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;downloading in progress...&quot;]" />
-                                                  </If.Else>
-                                                </If>
-                                              </Sequence>
-                                            </ui:InterruptibleDoWhile.Body>
-                                            <ui:InterruptibleDoWhile.Condition>
-                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="fileReady=False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-                                            </ui:InterruptibleDoWhile.Condition>
-                                          </ui:InterruptibleDoWhile>
-                                          <ui:MoveFile ContinueOnError="{x:Null}" Destination="[monitoredFolder+&quot;\Tender Documents\&quot;+Row(&quot;Reference Number&quot;).ToString]" DisplayName="Move File: transfer to Reference Number Folder" sap:VirtualizedContainerService.HintSize="716.8,160" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True" Path="[monitoredFolder+&quot;\&quot;+downloadedFile.ToString]">
+                                              </ui:InterruptibleDoWhile>
+                                            </If.Else>
+                                          </If>
+                                          <ui:MoveFile ContinueOnError="{x:Null}" Destination="[monitoredFolder+&quot;\Tender Documents\&quot;+Row(&quot;Reference Number&quot;).ToString]" DisplayName="Move File: transfer to Reference Number Folder" sap:VirtualizedContainerService.HintSize="788,160" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True" Path="[monitoredFolder+&quot;\&quot;+downloadedFile.ToString]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1777,7 +1778,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:MoveFile>
-                                          <Assign DisplayName="Assign:reset to default not exist" sap:VirtualizedContainerService.HintSize="716.8,61.6" sap2010:WorkflowViewState.IdRef="Assign_56">
+                                          <Assign DisplayName="Assign:reset to default not exist" sap:VirtualizedContainerService.HintSize="788,61.6" sap2010:WorkflowViewState.IdRef="Assign_56">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:Boolean">[getExist]</OutArgument>
                                             </Assign.To>
