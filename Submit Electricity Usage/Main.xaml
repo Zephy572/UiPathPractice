@@ -1,0 +1,378 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1402.4,3232.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence Submit Electricity Usage " sap:VirtualizedContainerService.HintSize="1060.8,3068" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ready" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox sap2010:Annotation.AnnotationText="ask user if ready to do submission" Buttons="YesNo" Caption="Submit Electricity usage" ChosenButton="[ready]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1019.2,91.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Are you ready for end of month electriciy usage submission?&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <If Condition="[ready = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="1019.2,2844" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="641.6,2684.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="reading" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="600,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;user ready = &quot; + ready]" />
+          <Sequence sap2010:Annotation.AnnotationText="check the digits entered match the website." DisplayName="Sequence: check input readings" sap:VirtualizedContainerService.HintSize="600,112.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="if user entered reading digits not enough, add 'zero' to the string" DisplayName="Do While: check if user enter a valid meter reading" sap:VirtualizedContainerService.HintSize="200,112.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,496.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="ask user to input electricity meter reading" DisplayName="Input Dialog: get electricity meter reading" sap:VirtualizedContainerService.HintSize="333.6,272.8" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter electricity meter reading" Title="Submit Electricity Usage">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[reading]</OutArgument>
+                    </ui:InputDialog.Result>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InputDialog>
+                  <ui:MessageBox sap2010:Annotation.AnnotationText="verify user entered the correct meter reading.&#xD;&#xA;if yes proceed&#xD;&#xA;if no re enter&#xD;&#xA;if cancel exit workflow" Buttons="YesNoCancel" Caption="Input verification" ChosenButton="[ready]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,136" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Electricity meter reading = &quot; + reading]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MessageBox>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ready=&quot;No&quot;" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+              </ui:InterruptibleDoWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+            <ui:LogMessage DisplayName="Log Message: reading" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;reading = &quot; + reading]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <If Condition="[ready=&quot;Cancel&quot;]" DisplayName="If: user input Cancel, workflow terminated" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="User input &lt;Cancel&gt;" />
+              </If.Then>
+            </If>
+          </Sequence>
+          <Sequence DisplayName="Sequence Login to website" sap:VirtualizedContainerService.HintSize="600,2306.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="558.4,2213.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://eservices.openelectricitymarket.sg/#/login">
+              <ui:OpenBrowser.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="524.8,2111.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="getExist" />
+                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut sap2010:Annotation.AnnotationText="to enable after asset has been setup in orchestrator" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,96.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="330.4,173.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetRobotCredential AssetName="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="288.8,80.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:ImageFound DisplayName="Image Exists 'chrome.exe Login'" Found="[getExist]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                      <ui:ImageFound.Image>
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                      </ui:ImageFound.Image>
+                      <ui:ImageFound.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ff2c265b-47c5-4e9d-907b-523a4e84f11f" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:ImageFound.Target>
+                    </ui:ImageFound>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;OK button exist = &quot; + getExist.ToString]" />
+                    <If Condition="[getExist=True]" sap:VirtualizedContainerService.HintSize="483.2,676.8" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <TryCatch DisplayName="Try Catch: if unable to find UI element, refresh browser and try again" sap:VirtualizedContainerService.HintSize="433.6,497.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch.Try>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f235b83b-ab90-4c73-afa7-ca1fd21ea8c9" InformativeScreenshot="799737021f2374cb1d87f3932538fd89" Selector="&lt;webctrl aaname='OK' idx='2' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                              </ui:Click.Target>
+                            </ui:Click>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,332.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,262.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="RefreshBrowser_2" />
+                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="006227d0-669f-4624-b0c2-c4aba9e7e091" InformativeScreenshot="4d0cb6034bd3f3f4502f108d66e6e584" Selector="&lt;webctrl tag='BUTTON' aaname='OK' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                </Sequence>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                      </If.Then>
+                    </If>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into User iD" EmptyField="True" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="Xiaodiz572">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eec493b7-b105-4da4-a092-70dc7d8e9630" InformativeScreenshot="9043233490eaa539871a793ef4fe2bcc" Selector="&lt;webctrl id='input_*' tag='INPUT' aaname='User ID' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="xiaodiz005">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79124eb9-c54b-47f3-a507-9e7d684e4980" InformativeScreenshot="f73a3c43e44b4e296938b4092a688afb" Selector="&lt;webctrl tag='INPUT' type='password' aaname='Password' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Login button" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="756ca921-cd78-465b-80d9-01b1fcdd9f20" InformativeScreenshot="cc840238a58a21b74321cfcb53f59ae7" Selector="&lt;webctrl tag='SPAN' aaname='Login' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  submit meter reading button" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3bd458b4-2e62-4cca-9ae8-3c86bc27bcaf" InformativeScreenshot="2b455b8bff57956ac8896650252cb0fb" Selector="&lt;webctrl aaname='file_uploadMeter Readings' tag='A' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:ImageFound DisplayName="Image Exists: not due to submission yet" Found="[getExist]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                      <ui:ImageFound.Image>
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.8799999952316284" Profile="Basic" TargetImageBase64="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" />
+                      </ui:ImageFound.Image>
+                      <ui:ImageFound.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ba4f201f-26e6-49d8-a941-8de8ffe4e2e6" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;md-content&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='7' isleaf='1' parentid='meter-reading-container' tag='SPAN' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:ImageFound.Target>
+                    </ui:ImageFound>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;not due for submission = &quot; + getExist.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:OpenBrowser.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:OpenBrowser>
+          </Sequence>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Submit Electricity usage" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Don't forget to submit&quot;]" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

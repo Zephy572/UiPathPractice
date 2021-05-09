@@ -1,9 +1,8 @@
 {
-  "name": "Multi Files",
-  "description": "to send multiple screenshots attachments in  email",
-  "main": "SingleReceipent.xaml",
+  "name": "Submit Electricity Usage",
+  "description": "submit electricity usage at end of month through Open Electricity Market website",
+  "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.4]",
     "UiPath.System.Activities": "[21.4.0]",
@@ -38,13 +37,13 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "SingleReceipent.xaml",
-      "uniqueId": "dcac53e6-2df2-47c3-a0bf-73e44f520a2c",
+      "filePath": "Main.xaml",
+      "uniqueId": "3cdcc5f8-be4a-441a-8d77-80a6fc277ee3",
       "input": [],
       "output": []
     }
