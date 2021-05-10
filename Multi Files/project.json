@@ -1,7 +1,7 @@
 {
   "name": "Job Application",
   "description": "to send multiple screenshots attachments in  email",
-  "main": "SingleReceipent.xaml",
+  "main": "Job Application Screenshot.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -43,8 +43,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "SingleReceipent.xaml",
-      "uniqueId": "dcac53e6-2df2-47c3-a0bf-73e44f520a2c",
+      "filePath": "Job Application Screenshot.xaml",
+      "uniqueId": "5b61edf2-6331-4f46-a7e9-e33b4cf69048",
       "input": [],
       "output": []
     }

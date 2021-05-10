@@ -92,7 +92,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Automation scope&#xA;&#xA;-consolidate screenshots of job application&#xA;-send to recipent(s) specify in template&#xA;-classify screenshots into folder name by week&#xA;ie 3 may - 9 may &#xA;-read from screenshots for jobs applied&#xA;-compiled into an excel report for easy reference&#xD;&#xA; . filename must be properly named&#xD;&#xA; . companyName_jobRole_datetime.png&#xD;&#xA; . ie RACE_RPA Developer_Date.png&#xA;" DisplayName="Sequence: email with  Multiple Attachments" sap:VirtualizedContainerService.HintSize="933.6,7072" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automation scope&#xA;&#xA;-consolidate screenshots of job application&#xA;-send to recipent(s) specify in template&#xA;-classify screenshots into folder name by week&#xA;ie 3 may - 9 may &#xA;-read from screenshots for jobs applied&#xA;-compiled into an excel report for easy reference&#xD;&#xA; . filename must be properly named&#xD;&#xA; . companyName_jobRole_datetime.png&#xD;&#xA; . ie RACE_RPA Developer_Date.png&#xA;" DisplayName="Sequence: email job application screenshots to recipent(s)" sap:VirtualizedContainerService.HintSize="933.6,7072" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="C:\Users\xiaod\Downloads\Job Application Screenshot" Name="selectedFolderPath" />
       <Variable x:TypeArguments="x:String" Default="emailTemplate.xlsx" Name="emailTemplateName" />
