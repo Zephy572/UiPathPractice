@@ -1,0 +1,373 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="dataScrapping" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408,4001.6" sap2010:WorkflowViewState.IdRef="dataScrapping_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="46">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="dataScrapping" sap:VirtualizedContainerService.HintSize="750.4,3836.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="keywordDT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="for testing pirpose only. to be deleted upon workflow completion" DataTable="[keywordDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="708.8,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;keywords&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;keywords&gt;data analyst&lt;/keywords&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Data Scrapping JobStreet" sap:VirtualizedContainerService.HintSize="708.8,3600" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="675.2,3383.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[keywordDT]" DisplayName="For Each search keyword in data table" sap:VirtualizedContainerService.HintSize="633.6,3288.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,3166.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="requirements" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="resultsDT" />
+                      <Variable x:TypeArguments="x:String" Name="textResults" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
+                      <Variable x:TypeArguments="x:String" Name="textDT" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;keyword = &quot; + row(&quot;keywords&quot;).ToString]" />
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="558.4,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch.Try>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into: Search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[row(&quot;keywords&quot;).ToString]" Timeout="10">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/en/job-search/robotics-process-automation-jobs/" DesignTimeRectangle="479, 227, 420, 55" ElementType="InputBox" FriendlyName="'robotics process'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="fa206715ba436b99b9f4740cf9a6b8a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics process automation Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" WaitForReadyArgument="Complete" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence sap:VirtualizedContainerService.HintSize="375.2,444.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" />
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into: Search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" Text="[row(&quot;keywords&quot;).ToString]" Timeout="10">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/en/job-search/robotics-process-automation-jobs/" DesignTimeRectangle="479, 227, 420, 55" ElementType="InputBox" FriendlyName="'robotics process'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAagAAAA7CAYAAAAuNx6ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAA2QSURBVHhe7Z3psxXFGYfzD+Rf8EO+pUxSlVSSUqusWJaBGGJQ4lIYVAyLoIIiIKKgICIIqAgiixoFlIgoixugBgUFFJVFWURAlEUhooCXfev49D3v0GduD3fO5Rzu1OX3VHVdzpyeXt9+f9PLHH728/MGOQUFBQUFhaIFCZSCgoKCQiGDBEpBQUFBoZChgUBNnLHM7a076IQQQojmpEyglq/bXroshBBCNC+JQDFzEkIIIYpCIlBa1hNCCFEkEoESQgghioQESgghRCGRQAkhhCgkEighhBCFRAIlhBCikEighBBCFBIJlBBCiEIigRJCCFFIJFBCCCEKiQRKCCFEIZFACSGEKCQSKCGEEIVEAiWEEKKQSKCEEEIUkjMmUFt37HVLV21NghBCCHEqai5QL85f7f7SfYo7p9WosvCrdmPdo1OXuL11h0oxhRBCiJPUTKAQni6DZnsxOveKse6OkXPdUzM/9oL1yJTF7vwOk/x3F1w3ya3ZuLN0V/E4ePCQ63/PYB/4dzU5fvy4W/TeErdmzbrSFec2bdrsWrdp5x4bO750RZxt7Pr+Bzdr9qtVt7daITsWtaJmAoUgIUD8zZolIVg2myrqTKqWAvXRx8vdOb841/81NLDPbmppb7VCdixqRU0EilmSiVNjzFu8wcdltlVEzrRAibObliJQQlSDmghU626T/bJe3lmRzbY4SFE0JFDiTCKBEuIkVRcoRCbv7MmwWRRLftWE5QUG+uIlH7grr7ne/eZ3F7ix4ya5w4cP++937NjpRowa7S66pI0fYG3btXdTnnvB7d9/wH8PocNYvnyl69W7v/vlr//o7xk3/km3e/eeUsyT/PhjnZv01LPu0r9d6dO1uOwtGJSN7yywHMKySNbSCGWibJTRyjr1+ellTox6vTH3Tde+Qycfh/p2v/UOt/SDj9yJEydKseJYvjNenu3mvPpGkg9pzZ33ljt67Fgp5sk2GT3mCTfvzbddq0svd+df+Gd/77Fjx33cd95d5K7veJNvK8rR584Bbu3azxuUg89c53viWdx1n39RilFPOh7pdrmpZ7RuW7duc/c/8JAvE3WgH2J9lTdeFvQn8dv+41p/P+Hq9jc06JdTOXD6+bqOXd0Pu3cnfWBpEUI7yGNXYHZPelY/2qzf3fe57d986/bt2+fGT3za3087YtNfbyk/Wcu+0pKlH7qbe/RO2oe/fe8aWNY3ldpxpXXYtm27G/nwYz5vyoo9f7Z6TaP2LFoGVReopau2NElsuGfQ+AWlT9UBI7+kdVvvbJ+bNt29/sb8nxzaMv/dhg2b/PXLLr/GO/73Fy/1DpeBfHvvu5IBY86YdBhMDwwb6eMyqIjbpVvPssH13Xe7XOeuPXzcJyY85eM++fRk/7nDDV3cl5u/8vHIn3wZpPxd9tEn3nHEBralSX6UkQ3pUY+M9QN2+IhHvTAhDBMm/TuJQ77UF+dHvIWLFpdSi2P54mypK2UmH5wXZSRt8gBrE+LjkF95ba57eeYr3nEhTtSbPO8eMNj9d8HCpBw4GcTOnAt/Z895zcfle+IRrm7f0bfXp5+tSeIhmtTN4pFuj9v6+ntJw9KkfelXixf2K3Wpq6urKF4WOE7KSRtMnjLN29W8+W97B0p7Pf3M1KRMeQWK/qccCC+BPsNOIK9dAWlec+2NvnwDBw31/ZjY60/p0m73DLzfXycN+oVy79lTv4JBuZ+d/LxvW0SNtiY/8iW/dld18OIOTbHjptaBByDGK+Vd9enqUkzRkqmZQLEPVQmVzrrygJEzcHCKIcxGeve9xzsocwDAwOTJn4FpDsacMenMnPVq4nQAB0LcF6a/7D/jwBEOBhBP9iE89V3c6jI35MGRyQwu5rjSA5v8eOL8/XkX+ZmgwfVp/5nhr69Y+akXyWuv6+weGT2urIzf/jRLvOFf3d2Yxye6o0ePlq42xPJNlx3BYZZJ2dd/scFfszaxvENwOrQJDiicde3d+6MX/tC5bdmyzfcBTjCctVJmnNN9gx/0bUV87kvHI/0xj08oK9tLM+f4Gd3GjV/6z2BthbP7fH3903/eeFkgmMwC0vVnhtCzVz/XsVP3xOHnFSiwtiXwb6jUrszucf7MhIA0Hho52l+nP8O+4eGNvrQHAmwJERs8ZHiSpsH4IA0eSow8dtzUOqTtiPamrNRNtHxqJlAcJc8Lx8wrvScPGHnaCQEDESNnYKbh6Q9Hag7GHAbOf+fO/5Vi1WNxCfybp+orrvyndwQ22zDMQbT5+1Vu81df+2t5BjZloCyhwzKIizN98aVZiUAhvPy7UizfWNnXrlvv/nTxXxOnELZJmNeRI0f8khJlYvk0DU/BoXPjL2KWdtwIBYLKUz1ixZHrWDywsllfIjz07ZtvLUicc4y88ZoCfReKTqyfjXTcmEBValekSZvQNiG0I+X44MNygeBzVvnSmJ2QlhGrX9qOq1UHs3NLV7RsanJIggMSvN+UF4QJgar2+1AYccxZ4hhjA9XgPgYXgyzmMAwcKTMWBh4DkD0qHCnOL4Y5CBvIeQZ2+nMWDHKW4UiPMrCUw7Ibew7hjCqLmOMxcJ440QH3DnGHDh1K2sSE2TAxvbP/ve7AgYOlqydJ1yVs51NBPJwVZWMpLQyvvT7PP4SY47OlO9qBpaORD4/x7Zvuu7zxGoP4zMIR30lPPuNF1ZYiqyVQldpVVrsSL/bAllU+hBtB4DrLqEOHjUr2jkI7id2f7uum1MHGVYjZIg9CPBCJlk1NBMoEJ88+FIcqeA+KF3erTXrwG+nBkCYc4DGHERLGtYEaDt6QdL4WPyxHemCnP58KlkLeXfi+FyecAWkTbux8c9lLlDEsn5hom1OwNshqk3S8NOm6hG2XheVldckKYZ48kLD0h/DY94gGM8CwXHnjxeB74hHf7sV5I3QId2h3sX42aIMwrtU3rI/dn9eu0mkaxIu1d6x82At2w3UC9UR8mdnaw4IRuz/d1xbndOvQmI2JlkVNBIrj5fZLEafai2LGZD+DxNJgtcky8mrNoGxpwmZpzTmDSsNeDekOun+Ydy6xJcoQyyfmQHiK5n57as1qk1rMoNKz1EpgBsA9bK5zipO2tv3CkLzxDMrEHiXxOGH2zbc7kn0Ss4nQ7mL9DLG4sbZtyuwjZvfEi7V3uny258cMk33Pffv3++tgS6qhncTql+7ratWBz1yPjUfR8qiJQAHiw1If4nN1n+lu/pIN/hrixY/FDh7/jp858T2h96jqHpCALCO3PajYRmvWHhRHpr//oXxvh+85xZfeg4otP5gzqnQPijzJOzYgEQ6ecnmqXbFylT+Bx55KSP1+zoRGhcDyJW56STC9zxNzomB7UFlikt6DwinhtML6GzgyO6xAvlnxKBv15gQZy48IBocUOKwQErZr3nhZcE+3W3o12IMDs5/Q7qyfqX9ILG6sbSu1qyy7zytQ2BCfY2JifVipQFWrDnzmemw8iJZHzQQKEKPO99X/Hl8sMMti5mQv6lZbpLKMPM8pPk7O8dkcBtfC48z8tSPSNlgZaI2dVLKTaWADO5zJpQc2+VCWWJp2ipBTisyOcJixk24PDn+40RmI5ZtuE8qK8wgdW8yJGo2d4iN9Tu+BneJjbyssM0e8OeqN+PMQYGVjZhbueZE3Do+HDTtNx8yHz+GJR1i9Zq0XWXsoyRsvhgkLsy1mTwZ9xVFz6h/ufZrAm00Z9Cf9GhOocBZaqV2drkCZCCH6YXkR41t79vHfhQeM8thxteoggTq7qKlAGewzsR/Fe06IEXtUvJwbUguRyjJywAnjHGPvQbHWzjsbYA7jt3+40Ds0ew/J4qad66ne9WDZJHQO5rj69BvgBy2OLz2wIUyTtMKyWv6hYHJEmHdXKCfvkHAtfC8nhuVLHWkTlruy3jWyNok5CUSJenNP+j0oysvxbEsnVmaLGzqyMB7fhe9B4RhDMUy3FQcp7P2Z8Ih73nhZ4OzJG1uhLATqyztkt/ToXSYE1l6UHydNv1Bm8uJF2NBGbTZB/SmPPSxUYlenK1C7dn3vOnW91ZfB2oYxQnm7dr+tgX02xY6bWgcJ1NnFGRGovJhIVWs/KsvIDU64DRk6wg8QBigvnTIQQ8EJnfHHn6zwDglHw2mo9C8GGPwSAS9G2okn/sbelsep8iSKIyBN1uljAxsoEyJjaSKu6fzZS3nv/SXJLzgQODDBLwI0dpTa8sUp2i9J2P04nVDcwjaJ1Z96MauzclA/foEg65ckeIJGbBAwQp5fkqANYr9yAbQzQmD9yt9Y++eNF4M8w1/cCO9FgKg3DtjAJvgVE+tr7IiDCIhG2kY5YcjskXTt5CTktassu88rUMDYYDZOW4d2xPIms0dWIGycVGLHp1sHCdTZRaEECmpxWEI0jjkUnJgQQhSBwgmUaB4kUEKIoiGBEh4JlBCiaEighEcCJYQoGhIoIYQQhUQCJYQQopBIoIQQQhQSCZQQQohCIoESQghRSCRQQgghCokESgghRCGRQAkhhCgkEighhBCFRAIlhBCikEighBBCFBIJlBBCiEKSCNTeuvr/XloIIYQoAolATZyxrHRJCCGEaH4SgSIsX7e9dFkIIYRoXsoEisBMSst9QgghmpsGAqWgoKCgoND8YZD7P2R9X+DkbChyAAAAAElFTkSuQmCC" InformativeScreenshot="fa206715ba436b99b9f4740cf9a6b8a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics process automation Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" WaitForReadyArgument="Complete" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="558.4,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Timeout="10">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/" DesignTimeRectangle="1873, 377, 145, 55" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="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" InformativeScreenshot="1869a53e79511a930faf5a9b8e2e7f3a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jobs in Singapore - Search Job Vacancies - Career | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1898, 389, 95, 30" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search' parentid='contentContainer' tag='SPAN' type='' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAiCAYAAABLP2dcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQjSURBVGhD7Zi7ahtBFIZDHsaP4CIPkFJFyhQpUqRIkSJFcJUmRRApDA6kcaHCRQI2BGOMEAELbEgKFSoskCAGY4IjFllaR7K0ksbaP2duu7MXJSaWYRRm4C88c3Y0c77dc/G9n/fX4GSHHAyL5GBYJAfDIjkYFsnBsEgOhkVyMCySg2GRHAyLdCcwvMeHGDcDhAzRCAcBWPkQ/kr+M1bq5QlmdPZZdT9/fcFaOIyL9XNxAT7CTg/s2CP1MAvUZOcMg4f5z1qn5YZRwWTAPR5g8qqYWivh6pskEtYP4SXWLNVSw1CHR7OWv77yFVMRujwMlyFc/RcwfjTQzVu/X8ToO62zPsYvkmuZPMMCzGp1XGagbeByi0KhbyQkGmHHw/hdKWE7bNKCf4Kr92SvzMPvtKdYL8Jfb4F14n0ye0QwKvSbXhxqGcPsmPZZjX9rEbqjMEUXOz3D6O0OLm7wBXiv6NLCJ3TJWgujrQYmBEaMzgl+RXsUcVWTzgvbHibbdWl73EcoZgny03hfAYMcF5KujxoYlc8x/bgj9vlVVfsHfUzLtA+tSWczTNdViNUvV8B/U5+thWlbAWy3FNjFaOEJPHZsPEK/D1atY/BsMydX7GDc5lbZPNPd6snnjypy7kGNfzC5Tuh+7gvb2ZfdaE7A4HNlDsCwf9qSTqavJgZNKjRwzef1/hpG5mz6zAT/iZ67vRYOQ2h1F8Oq8Vmbw/cwem5cTF+Y8kwW1IH80gZUgWXWUopCShzfJQzuyKTt5Rd5MFZKFxlF+UxAZ3xEf+uznTZwkbBbU18Ww+RNcv42uhsYhjqFXQw2W5icGvmALjvU5W3JE1Nhk4cAHnZMNcB8vtpDkCiHN9B9UsGQbILqOZixdxZG+lkD0svkfEYaBlV/6TUd5lgpOX8b3TmMhFYpp3TEHTDb+yTmotj9xxE7rvvuBNepR0QYrPdE3sjCIPDq7+T8zWHkVVOWw/iA4TE/3l/i6JszmWxV+eupvKDh/FE61pMjp5sV+IWNeE3t62Ao9Y9krMgkTEMelZnCRl/QgDMvZ4SUM7hD/T2VpHOcc7GtoN4ARuzIdM5QawGBekt/LzMM882drH/KOJf3EjJMmW/lPiYiL9Dca+NNp2R6WZbOR/2r2Es7PKylOvgCNZO6pP52EM3PgxGdM1E2k1ZUwcDOZVO61DBIXUrIsuanQW/YrMn/N+XhOmquqF7f2084U5TDei3dZ/BkX1C2D6m0FdtouzrGRz1ZSrf7cg+j+58Lw+wzqLoT/YrRZ7CSavyWHQaX9/gAQY2co+4rBu9aeSP4wnz7zWfSHTjZU4V1pUFou+f1RNcMSt7TrV10jDK4r2znw+DiHTgVA0YnP78DX2IYTv8mB8MiORgWycGwSA6GRXIwLJKDYZEcDIvkYFijNfwGfvJj+luVmf0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;start data scrapping&quot;]" />
+                    <uix:NExtractData sap2010:Annotation.AnnotationText="limit at 10 items" AppendResults="False" ContinueOnError="True" DataTable="[resultsDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Job Title'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 0 Url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Company Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h1' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="558.4,198.4" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="10" Timeout="10">
+                      <uix:NExtractData.NextLink>
+                        <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/en/job-search/data-analyst-jobs/" DesignTimeRectangle="815, 1106, 93, 55" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' parentid='jobList' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' parentid='jobList' tag='A' type='' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAA7CAYAAABrE+QyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIXSURBVHhe7ZyxSgNBFEX9EgtbP8TCzlrRRhuxshIrS8EmKPgFKqgQwUqCjYKNYiFELQyCH2AqTbqVG3OHcbKLhbJzxXvgJbNv3ybwzr7Zbsfe3vuFI29YgkBYgkAECY9PL44MMSLB1EuQcHffsYRMBAn7xy1LyESQsLVzYAmZCBI2G3uWkAlLEMASBLAEASxBAEsQwBIEsAQBLEEASxDAEgSwBAEsQQBLEMASBLAEASxBADkJr91uMbewVKytbxS9Xn+Y/QTHyDdPToeZn9NuP4z8T93IShifmCyub26H2U9+WwJ+p0x23chKWF5ZHXzjmFhCTVDCxeXVoEGN7d3hmXIJnc5zMTU9M5gcRFyPNc6hBvB6xOFRM1wT1+RAVgK2IjaY21IqAfmyJlNE3HSscV08XZ6ECmIJIG5cKgHN5ppAyOz8YhBDkahNnzOWUEEqgY1HE2MJXHNLiSPdXlCPPCeEWEIFqQTAu5nPCTSPdVh/B6cgbbglVFAmAaCREIGtBs3jJKR3dwp+BwLOWucj0iyhgioJzKOhbCQbHNfiHOpQn04L6uKtCseszcmfkQDY9PhuZo7BpnJS0jsdk5NKSkXWjZyE/4glCGAJAliCAJYggCUIYAkCWIIAliCAJQhgCQJYggCWIIAlCGAJAliCAJYgQJDgt7zkI0jw+47yEST4zV/5CBLwYQl5KJXgqD++SHDkin7xAZBpSrW2QwEoAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Data analyst Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NExtractData.NextLink>
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="479, 358, 549, 11304" ElementType="InputBox" FriendlyName="'DIV jobList'" FullSelectorArgument="&lt;webctrl id='jobList' tag='DIV' /&gt;" InformativeScreenshot="a9610efecb2f9b9f48344fcc7f95bed8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Data analyst Jobs in Singapore, Job Vacancies - May 2021 | JobStreet' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;job title URL scrapping completed&quot; + vbcr +&#xA;&quot;start get text Requirements... &quot;]" />
+                    <ui:CommentOut DisplayName="Comment Out:Debug purpose" sap:VirtualizedContainerService.HintSize="558.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:OutputDataTable DataTable="[resultsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[textDT]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out: Debug purpose" sap:VirtualizedContainerService.HintSize="558.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="270.4,155.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[textDT]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[resultsDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="558.4,1815.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,1692.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="url" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="483.2,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["https://www.jobstreet.com.sg" + row(1).ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="483.2,61.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;job title #&quot;+counter.ToString +&quot; &quot; + row(0).ToString]" />
+                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="483.2,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[url]" />
+                            <uix:NGetText sap2010:Annotation.AnnotationText="selector #1" ContinueOnError="True" DisplayName="Get Text 'Requirement'" sap:VirtualizedContainerService.HintSize="483.2,198.4" sap2010:WorkflowViewState.IdRef="NGetText_2" Timeout="3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/en/job/data-analyst-4554814/origin/my?jobId=jobstreet-my-job-4554814&amp;sectionRank=2&amp;token=0~4d038068-4131-4c38-bd2f-658d8a8be3f4&amp;searchPath=%2Fen%2Fjob-search%2Fdata-analyst-jobs%2F&amp;fr=SRP%20View%20In%20New%20Tab" DesignTimeRectangle="579, 807, 1400, 470" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;ul' idx='2' tag='UL' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;ul' type='' tag='UL' aaname='' /&gt;" InformativeScreenshot="856ff27ddcccf6dfec6e6ea55a527c91.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Data Analyst - Xtremax Pte Ltd - 4554814 | JobStreet' /&gt;" SearchSteps="FuzzySelector">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="579, 746, 122, 22" FriendlyName="'Requirement'" FullSelectorArgument="&lt;webctrl idx='3' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' aaname='Requirement' check:text='Requirement' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAaCAYAAABxRujEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKpSURBVGhD7ZQxThxBEEU5CQGpD0LgjBjLJPgOiMhHQAQ+hi05shAnsMUNEBkQeUPIxvqIWj+Vunq62V4Y1P2kkma7e+pX1e/ZnWnQJcP4ThnGd8owvlOG8Z0yjO+UtfF/V6vp09GXaXfvQza+//j5/MYyYR8np1+nh4fH550++f3nKulZtfGKJQ90GP+fs/NvT3NoZrxCN2mwXOSPeVVsfPSl2A2Kkg2WQ1Pjr69vpv2PB09ndAmIzus9E0udIbxEChWn0LPqUD0i14DlUE2qTUR98Oyvi8t1H9TiuxZek30qJ2eiME0/D+qQEk3he/Xz4z+w37Ng3iZffKp4C5/LDyQVHFJr431oXXgDU2dESf2Hn4+TudiXKNUUUf0WnEF0dtb4uaCIMKESw/Rs65Ex2zae64Jmco+12hfFswrlFX5+7IHaqTxzmiKaD9c5n9zcxIuMZ0G8tZEx1hib9ZeH+mws14DlrzWe9QtqcI/16n2/Fn0APg/NtB5qNEWUm/PneebfyHjfpEGBKMzIyBTBhrdpfKoPGhOF5YrqFJFGqocaTRHl1rPWtLex8RRkgamhlRhv771n462mqE7R2njmf3XjhYkqfLNzAiSnsRTjpZdjG8bPaYoo91aN554XiIRT5IbGPNxjA8zPXBxG1Ec0ODE3JNLK+BpNEeXm3DifJsYLJlLot+AguF5SkK37HBwo83Bdzdh5DuMlxvMd7qeG18r4Gk0R5daz1rQXzXkj44WJ+zMU9+EL9SanggMtOU+NqI+c8YKD8hHVw3VRY7wo1RS1xnPdgtpVxvOMT5QyKMojeImU8/buPhyoz23Np4YR9RENjvj+FBymYC2+zkgj9/WVaIoot561lnrPXyzur41/a3IDHbRnGN8pw/hOGcZ3ymKMH7wm0/QP08ASHn+wPKIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="x:String">[requirements]</OutArgument>
+                              </uix:NGetText.Text>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NGetText>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;selector #1 = &quot; + requirements]" />
+                            <If sap2010:Annotation.AnnotationText="#2 selector" Condition="[IsNothing(requirements)]" sap:VirtualizedContainerService.HintSize="483.2,636" sap2010:WorkflowViewState.IdRef="If_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,424" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NGetText sap2010:Annotation.AnnotationText="#2 selector" ContinueOnError="True" DisplayName="Get Text 'Job Description'" sap:VirtualizedContainerService.HintSize="333.6,198.4" sap2010:WorkflowViewState.IdRef="NGetText_1" Timeout="3">
+                                    <uix:NGetText.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.jobstreet.com.sg/en/job/senior-development-engineer-artc-8516516?jobId=jobstreet-sg-job-8516516&amp;sectionRank=1&amp;token=0~7a5532d7-543c-49d0-928b-65d2bbd3facb&amp;searchPath=%2Fen%2Fjob-search%2Frobotic-automation-process-jobs%2F&amp;fr=SRP%20View%20In%20New%20Tab" DesignTimeRectangle="579, 573, 1400, 990" FriendlyName="'Responsibilities-Design…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='contentContainer' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='contentContainer' tag='DIV' type='' aaname='-Design, develop and implement robotic automation solutions-Designing and selecting robotic system as well as system modules such as EOAT, fixtures, adaptors 3D Simulation, cycle time analysis and optimization-Program robot &amp;amp; other peripherals-Develop testing and validation methods-Conducting experiments-Report writing and presentation-Master/Bachelor???s degree in Mechanical/Mechatronics/Electrical &amp;amp; Electronic Engineering or related area-3+ years robotics and/or controls engineering experience in R&amp;amp;D projects or equivalent academic and research experience-Designing experience with Siemens NX/Solidworks/AutoCAD etc.-Extensive experience with 3D simulation software such as Process Simulate, RobCad, etc.-Experience in industrial robot programming &amp;amp; offline programming-Knowledge in automation/electrical/control/ pneumatic/ hydraulic systems-Knowledge in software development would be an advantage-Willing to learn and adapt to new technology quickly-Good interpersonal and communication skills-Design, develop and implement robotic automation solutions-Designing and selecting robotic system as well as system modules such as EOAT, fixtures, adaptors 3D Simulation, cycle time analysis and optimization-Program robot &amp;amp; other peripherals-Develop testing and validation methods-Conducting experiments-Report writing and presentation-Master/Bachelor???s degree in Mechanical/Mechatronics/Electrical &amp;amp; Electronic Engineering or related area-3+ years robotics and/or controls engineering experience in R&amp;amp;D projects or equivalent academic and research experience-Designing experience with Siemens NX/Solidworks/AutoCAD etc.-Extensive experience with 3D simulation software such as Process Simulate, RobCad, etc.-Experience in industrial robot programming &amp;amp; offline programming-Knowledge in automation/electrical/control/ pneumatic/ hydraulic systems-Knowledge in software development would be an advantage-Willing to learn and adapt to new technology quickly-Good interpersonal and communication skills' /&gt;" InformativeScreenshot="b226ac2f373febc943ea3e0349931fa0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Senior/Development Engineer, ARTC - Advanced Remanufacturing and Technology Centre (A*STAR) - 8516516 | JobStreet' /&gt;" SearchSteps="FuzzySelector">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target DesignTimeRectangle="579, 527, 1400, 16" FriendlyName="'Job Description'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' aaname='Job Description' check:text='Job Description' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NGetText.Target>
+                                    <uix:NGetText.Text>
+                                      <OutArgument x:TypeArguments="x:String">[requirements]</OutArgument>
+                                    </uix:NGetText.Text>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NGetText>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;selector #2 = &quot; + requirements]" />
+                                </Sequence>
+                              </If.Then>
+                            </If>
+                            <Assign sap2010:Annotation.AnnotationText="reset to NULL" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[requirements]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 2578, 1458" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOCSURBVFhH7djZTuMwFAZgHmlecEbsdKUL3XfWB0LiAgmpSIiB0kIRaOiS0jP+HTtL40xjh5mrsfQrSavWHyeNFzb+t7/VLi4u6Pz8nM7OznhOT0/p5AQ5oePjY+ohvR51uz3qdLvU6XSojbTb1Gq1qdlqUbPZpAZLvdGger2B98elUumb6CJeA+7z8zM0C28WIs75wnNc0HK5JPzB/dtb4L8GiaoBYlkWz1xmbmc2n4uw8xk7Iux6ys9n/DjlxxlHAvj29kb9fp9VtRUfaQOXMYE2UgLf399pPB7Tzc0Nbvs4l4uBxG8uUEGBM63g6+srvby80HA4pOvra6rW6gyZM0PigZDA1eqFAZ2qTdXA5+dnGo1G9PT0RA8PD3R1dUWVatUMiacVQBVu7uD0gIANBgOOu7+/p7u7O7q8vKRypTIW3UZvGEo40Aezo8LhGigODQFmMhll8oUCiW6jN4xzKqCLQ1RAiRNAYFkGuK2PrHo8j6yKj/STZTgcUS5vAmSDsB8oUTJBHI+o3oQfXSCu3UxpMpnSB4tlLRgwrw/EDIGB14+S8eAkjMfGuecqnA0ETgIPcwZATF9BIG6xH4fXAeJQ1vkq7k/Vk8DsYc4AyOZVGyhQIbAgzg/048KAh/pATPyYT30omYi4ddWTwEzWBMhWJT6guM0uJIgDIhwXDkxns/pALJnkb9CLQmy0gIjXTHAOMGMAxHoOFVSiEPG6HVy77wVxSDgwlc4YANlCEzOAA0J8KE/VDHE20KJkOq0PxErYW0ElKiYOwTyfTBkAsUznFVzFeMMAcXAfHxMOTKRSBkC2h1ACWcfrYch63C8BPEgaAGv1evA36IkaJbMGxwKcA0wk9YHVWs0BqhGqMJgGTgL3EwkDYLVGFgOqIatxYetw8tb6gAcGQLYUjwDUgCErOAnc2z/QB5YrKqAAeVCRYJMgTAbAXTNgRQCDoGgoEQXKGw7c29cHlsplPg0pO40aBWg1AO4YAUsxgApIWADc3t3TBx6VSvpABWBdOHBnVx9YPIoKnBjBZADcMgMehQBtUByUNwBubu/oAwtFAK0vg4TFGJgvFvmHVV/6lUEfP7a2DYCFAv/wv8j3zS19IP4dgR0/NtXYt2JriN0XNjjYQ2CZjpUwFptYz2HJhFUJJn7MrZi+MENgEMY4h6EETyseCNxSBJUDzgj4v0VqGxu/Af19epyRUejIAAAAAElFTkSuQmCC" InformativeScreenshot="3ec62d950e2d24f38300889fc3147031.png" Selector="&lt;html app='chrome.exe' url='https://www.jobstreet.com.sg/' /&gt;" Url="https://www.jobstreet.com.sg/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

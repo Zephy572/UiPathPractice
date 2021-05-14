@@ -1,7 +1,7 @@
 {
   "name": "Matching",
   "description": "search multiple job portals to match job description with CV ",
-  "main": "StateMachine.xaml",
+  "main": "dataScrapeMyCareerFuture.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.4]",
@@ -15,6 +15,7 @@
   "studioVersion": "21.4.3.0",
   "projectVersion": "1.0.0",
   "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
     "autoDispose": false,
     "isPausable": true,
     "requiresUserInteraction": true,
@@ -51,6 +52,30 @@
     {
       "filePath": "StateMachine.xaml",
       "uniqueId": "371fbb8d-83bc-4fb5-9978-34342efdcf9e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "RegEx Matching.xaml",
+      "uniqueId": "cd02da6e-16ab-4b54-8371-a5bb4f7e25e1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "dataScrapeJobStreet.xaml",
+      "uniqueId": "0808010f-07bc-4e3e-a783-0916c441f019",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "dataScrapemonster.xaml",
+      "uniqueId": "6f8316a8-47cd-446c-ab63-a2e73177d736",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "dataScrapeMyCareerFuture.xaml",
+      "uniqueId": "61b747c9-1e08-4d10-ae9b-dbd42a22604b",
       "input": [],
       "output": []
     }
