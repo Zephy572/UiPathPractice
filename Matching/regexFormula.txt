@@ -1,0 +1,7 @@
+diploma electronics engineering
+\w* in (engineering|\w* engineering)
+
+experience 
+[mM]inimal|[mM]inimum|[aA]t least |\d\d? |(to \d\d? )|-\d\d? |years of |experience |\w* experience|in \w*
+
+"Python" + "\s{0,}|" + "Python"

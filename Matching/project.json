@@ -1,7 +1,7 @@
 {
   "name": "Matching",
   "description": "search multiple job portals to match job description with CV ",
-  "main": "dataScrapeMyCareerFuture.xaml",
+  "main": "matchCvJD.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.4]",
@@ -56,12 +56,6 @@
       "output": []
     },
     {
-      "filePath": "RegEx Matching.xaml",
-      "uniqueId": "cd02da6e-16ab-4b54-8371-a5bb4f7e25e1",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "dataScrapeJobStreet.xaml",
       "uniqueId": "0808010f-07bc-4e3e-a783-0916c441f019",
       "input": [],
@@ -76,6 +70,24 @@
     {
       "filePath": "dataScrapeMyCareerFuture.xaml",
       "uniqueId": "61b747c9-1e08-4d10-ae9b-dbd42a22604b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "skillKeywordScrape.xaml",
+      "uniqueId": "053d9f00-e25e-4a3f-b4d8-4c9671181ff3",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "matchCvJD.xaml",
+      "uniqueId": "9c41c85d-5919-4bcc-93b2-86c745f29de3",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Build CV keyword List.xaml",
+      "uniqueId": "f047754c-6d51-46e0-9438-3fd9ee2487eb",
       "input": [],
       "output": []
     }

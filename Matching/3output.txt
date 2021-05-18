@@ -1,0 +1,419 @@
+05/17/2021 20:02:40 => [Debug] Debug started for file: matchCvJD
+05/17/2021 20:02:42 => [Info] Matching execution started
+05/17/2021 20:02:44 => [Info] read skill keyword data table completed
+05/17/2021 20:02:44 => [Info] Audit: Using Word. Document: C:\Users\xiaod\Documents\UiPath\Matching\Test Resume.docx
+05/17/2021 20:02:47 => [Info] read Word document completed
+
+05/17/2021 20:42:36 => [Info] CV and JD # 0 keyword #1 match= On
+05/17/2021 20:42:37 => [Info] CV and JD # 0 keyword #2 match= time
+05/17/2021 20:42:37 => [Info] JD not match
+05/17/2021 20:42:37 => [Info] CV and JD # 0 keyword #4 match= management
+05/17/2021 20:42:38 => [Info] JD not match
+05/17/2021 20:42:38 => [Info] JD not match
+05/17/2021 20:42:39 => [Info] JD not match
+05/17/2021 20:42:39 => [Info] CV and JD # 0 keyword #8 match= Management
+05/17/2021 20:42:40 => [Info] CV and JD # 0 keyword #9 match= E
+05/17/2021 20:42:41 => [Info] JD not match
+05/17/2021 20:42:41 => [Info] CV and JD # 0 keyword #11 match= Management
+05/17/2021 20:42:42 => [Info] CV and JD # 0 keyword #12 match= Design
+05/17/2021 20:42:42 => [Info] CV and JD # 0 keyword #13 match= of
+05/17/2021 20:42:43 => [Info] JD not match
+05/17/2021 20:42:43 => [Info] CV and JD # 0 keyword #15 match= Skills
+05/17/2021 20:42:44 => [Info] CV and JD # 0 keyword #16 match= Team
+05/17/2021 20:42:44 => [Info] JD not match
+05/17/2021 20:42:45 => [Info] CV and JD # 0 keyword #18 match= design
+05/17/2021 20:42:45 => [Info] CV and JD # 0 keyword #19 match= Team
+05/17/2021 20:42:46 => [Info] CV and JD # 0 keyword #20 match= R
+05/17/2021 20:42:46 => [Info] JD not match
+05/17/2021 20:42:47 => [Info] CV and JD # 0 keyword #22 match= Le
+05/17/2021 20:42:47 => [Info] CV and JD # 0 keyword #23 match= skills
+05/17/2021 20:42:48 => [Info] CV and JD # 0 keyword #24 match= Visual
+05/17/2021 20:42:49 => [Info] JD not match
+05/17/2021 20:42:49 => [Info] JD not match
+05/17/2021 20:42:49 => [Info] JD not match
+05/17/2021 20:42:50 => [Info] CV and JD # 0 keyword #28 match= skills
+05/17/2021 20:42:50 => [Info] JD not match
+05/17/2021 20:42:51 => [Info] JD not match
+05/17/2021 20:42:51 => [Info] CV and JD # 0 keyword #31 match= As
+05/17/2021 20:42:52 => [Info] CV and JD # 0 keyword #32 match= A
+05/17/2021 20:42:52 => [Info] CV and JD # 0 keyword #33 match= MS
+05/17/2021 20:42:53 => [Info] CV and JD # 0 keyword #34 match= R
+05/17/2021 20:42:54 => [Info] JD not match
+05/17/2021 20:42:54 => [Info] JD not match
+05/17/2021 20:42:54 => [Info] JD not match
+05/17/2021 20:42:55 => [Info] CV and JD # 0 keyword #38 match= Program
+05/17/2021 20:42:55 => [Info] JD not match
+05/17/2021 20:42:56 => [Info] JD not match
+
+05/17/2021 20:43:18 => [Info] CV and JD # 1 keyword #1 match= On
+05/17/2021 20:43:18 => [Info] JD not match
+05/17/2021 20:43:19 => [Info] JD not match
+05/17/2021 20:43:19 => [Info] CV and JD # 1 keyword #4 match= management
+05/17/2021 20:43:20 => [Info] CV and JD # 1 keyword #5 match= Python
+05/17/2021 20:43:20 => [Info] CV and JD # 1 keyword #6 match= Python
+05/17/2021 20:43:21 => [Info] JD not match
+05/17/2021 20:43:21 => [Info] CV and JD # 1 keyword #8 match= Management
+05/17/2021 20:43:22 => [Info] CV and JD # 1 keyword #9 match= E
+05/17/2021 20:43:22 => [Info] JD not match
+05/17/2021 20:43:23 => [Info] CV and JD # 1 keyword #11 match= Management
+05/17/2021 20:43:23 => [Info] JD not match
+05/17/2021 20:43:24 => [Info] CV and JD # 1 keyword #13 match= of
+05/17/2021 20:43:24 => [Info] JD not match
+05/17/2021 20:43:25 => [Info] CV and JD # 1 keyword #15 match= Skills
+05/17/2021 20:43:25 => [Info] JD not match
+05/17/2021 20:43:26 => [Info] JD not match
+05/17/2021 20:43:26 => [Info] JD not match
+05/17/2021 20:43:27 => [Info] JD not match
+05/17/2021 20:43:27 => [Info] CV and JD # 1 keyword #20 match= R
+05/17/2021 20:43:28 => [Info] CV and JD # 1 keyword #21 match= Mm
+05/17/2021 20:43:28 => [Info] CV and JD # 1 keyword #22 match= Le
+05/17/2021 20:43:29 => [Info] CV and JD # 1 keyword #23 match= skills
+05/17/2021 20:43:29 => [Info] JD not match
+05/17/2021 20:43:30 => [Info] JD not match
+05/17/2021 20:43:30 => [Info] JD not match
+05/17/2021 20:43:31 => [Info] JD not match
+05/17/2021 20:43:31 => [Info] CV and JD # 1 keyword #28 match= skills
+05/17/2021 20:43:32 => [Info] JD not match
+05/17/2021 20:43:32 => [Info] JD not match
+05/17/2021 20:43:32 => [Info] CV and JD # 1 keyword #31 match= As
+05/17/2021 20:43:33 => [Info] CV and JD # 1 keyword #32 match= A
+05/17/2021 20:43:34 => [Info] CV and JD # 1 keyword #33 match= MS
+05/17/2021 20:43:34 => [Info] CV and JD # 1 keyword #34 match= R
+05/17/2021 20:43:35 => [Info] CV and JD # 1 keyword #35 match= Programming
+05/17/2021 20:43:35 => [Info] JD not match
+05/17/2021 20:43:36 => [Info] JD not match
+05/17/2021 20:43:36 => [Info] CV and JD # 1 keyword #38 match= Program
+05/17/2021 20:43:37 => [Info] JD not match
+05/17/2021 20:43:37 => [Info] JD not match
+
+05/17/2021 20:43:59 => [Info] CV and JD # 2 keyword #1 match= On
+05/17/2021 20:44:00 => [Info] JD not match
+05/17/2021 20:44:00 => [Info] JD not match
+05/17/2021 20:44:00 => [Info] JD not match
+05/17/2021 20:44:01 => [Info] CV and JD # 2 keyword #5 match= Python
+05/17/2021 20:44:01 => [Info] CV and JD # 2 keyword #6 match= Python
+05/17/2021 20:44:02 => [Info] JD not match
+05/17/2021 20:44:02 => [Info] JD not match
+05/17/2021 20:44:03 => [Info] CV and JD # 2 keyword #9 match= E
+05/17/2021 20:44:03 => [Info] JD not match
+05/17/2021 20:44:04 => [Info] JD not match
+05/17/2021 20:44:04 => [Info] JD not match
+05/17/2021 20:44:05 => [Info] CV and JD # 2 keyword #13 match= of
+05/17/2021 20:44:05 => [Info] JD not match
+05/17/2021 20:44:06 => [Info] CV and JD # 2 keyword #15 match= Skills
+05/17/2021 20:44:06 => [Info] CV and JD # 2 keyword #16 match= Team
+05/17/2021 20:44:07 => [Info] JD not match
+05/17/2021 20:44:07 => [Info] JD not match
+05/17/2021 20:44:08 => [Info] CV and JD # 2 keyword #19 match= Team
+05/17/2021 20:44:08 => [Info] CV and JD # 2 keyword #20 match= R
+05/17/2021 20:44:09 => [Info] CV and JD # 2 keyword #21 match= Mm
+05/17/2021 20:44:10 => [Info] CV and JD # 2 keyword #22 match= Le
+05/17/2021 20:44:10 => [Info] CV and JD # 2 keyword #23 match= skills
+05/17/2021 20:44:11 => [Info] CV and JD # 2 keyword #24 match= Visual
+05/17/2021 20:44:11 => [Info] JD not match
+05/17/2021 20:44:12 => [Info] CV and JD # 2 keyword #26 match= Analytical
+05/17/2021 20:44:12 => [Info] JD not match
+05/17/2021 20:44:13 => [Info] CV and JD # 2 keyword #28 match= skills
+05/17/2021 20:44:13 => [Info] CV and JD # 2 keyword #29 match= .NET
+05/17/2021 20:44:14 => [Info] JD not match
+05/17/2021 20:44:14 => [Info] CV and JD # 2 keyword #31 match= As
+05/17/2021 20:44:15 => [Info] CV and JD # 2 keyword #32 match= A
+05/17/2021 20:44:15 => [Info] CV and JD # 2 keyword #33 match= MS
+05/17/2021 20:44:16 => [Info] CV and JD # 2 keyword #34 match= R
+05/17/2021 20:44:17 => [Info] CV and JD # 2 keyword #35 match= Programming
+05/17/2021 20:44:17 => [Info] JD not match
+05/17/2021 20:44:18 => [Info] CV and JD # 2 keyword #37 match= .NET
+05/17/2021 20:44:18 => [Info] CV and JD # 2 keyword #38 match= Program
+05/17/2021 20:44:19 => [Info] JD not match
+05/17/2021 20:44:19 => [Info] JD not match
+
+05/17/2021 20:44:41 => [Info] CV and JD # 3 keyword #1 match= On
+05/17/2021 20:44:42 => [Info] CV and JD # 3 keyword #2 match= time
+05/17/2021 20:44:42 => [Info] JD not match
+05/17/2021 20:44:43 => [Info] CV and JD # 3 keyword #4 match= management
+05/17/2021 20:44:44 => [Info] CV and JD # 3 keyword #5 match= Python
+05/17/2021 20:44:44 => [Info] CV and JD # 3 keyword #6 match= Python
+05/17/2021 20:44:45 => [Info] JD not match
+05/17/2021 20:44:46 => [Info] CV and JD # 3 keyword #8 match= Management
+05/17/2021 20:44:46 => [Info] CV and JD # 3 keyword #9 match= E
+05/17/2021 20:44:47 => [Info] JD not match
+05/17/2021 20:44:47 => [Info] CV and JD # 3 keyword #11 match= Management
+05/17/2021 20:44:48 => [Info] JD not match
+05/17/2021 20:44:48 => [Info] CV and JD # 3 keyword #13 match= of
+05/17/2021 20:44:49 => [Info] JD not match
+05/17/2021 20:44:50 => [Info] JD not match
+05/17/2021 20:44:50 => [Info] CV and JD # 3 keyword #16 match= Team
+05/17/2021 20:44:51 => [Info] JD not match
+05/17/2021 20:44:51 => [Info] JD not match
+05/17/2021 20:44:52 => [Info] CV and JD # 3 keyword #19 match= Team
+05/17/2021 20:44:52 => [Info] CV and JD # 3 keyword #20 match= R
+05/17/2021 20:44:53 => [Info] CV and JD # 3 keyword #21 match= Mm
+05/17/2021 20:44:54 => [Info] CV and JD # 3 keyword #22 match= Le
+05/17/2021 20:44:54 => [Info] JD not match
+05/17/2021 20:44:55 => [Info] CV and JD # 3 keyword #24 match= Visual
+05/17/2021 20:44:56 => [Info] JD not match
+05/17/2021 20:44:56 => [Info] CV and JD # 3 keyword #26 match= Analytical
+05/17/2021 20:44:57 => [Info] JD not match
+05/17/2021 20:44:57 => [Info] JD not match
+05/17/2021 20:44:58 => [Info] JD not match
+05/17/2021 20:44:58 => [Info] JD not match
+05/17/2021 20:44:59 => [Info] CV and JD # 3 keyword #31 match= As
+05/17/2021 20:44:59 => [Info] CV and JD # 3 keyword #32 match= A
+05/17/2021 20:45:00 => [Info] CV and JD # 3 keyword #33 match= MS
+05/17/2021 20:45:01 => [Info] CV and JD # 3 keyword #34 match= R
+05/17/2021 20:45:01 => [Info] JD not match
+05/17/2021 20:45:02 => [Info] JD not match
+05/17/2021 20:45:02 => [Info] JD not match
+05/17/2021 20:45:03 => [Info] JD not match
+05/17/2021 20:45:03 => [Info] JD not match
+05/17/2021 20:45:04 => [Info] JD not match
+
+05/17/2021 20:45:29 => [Info] CV and JD # 4 keyword #1 match= On
+05/17/2021 20:45:30 => [Info] JD not match
+05/17/2021 20:45:31 => [Info] JD not match
+05/17/2021 20:45:31 => [Info] CV and JD # 4 keyword #4 match= management
+05/17/2021 20:45:32 => [Info] CV and JD # 4 keyword #5 match= Python
+05/17/2021 20:45:33 => [Info] CV and JD # 4 keyword #6 match= Python
+05/17/2021 20:45:33 => [Info] JD not match
+05/17/2021 20:45:34 => [Info] CV and JD # 4 keyword #8 match= Management
+05/17/2021 20:45:34 => [Info] CV and JD # 4 keyword #9 match= E
+05/17/2021 20:45:35 => [Info] JD not match
+05/17/2021 20:45:36 => [Info] CV and JD # 4 keyword #11 match= Management
+05/17/2021 20:45:36 => [Info] JD not match
+05/17/2021 20:45:37 => [Info] CV and JD # 4 keyword #13 match= of
+05/17/2021 20:45:37 => [Info] CV and JD # 4 keyword #14 match= Application
+05/17/2021 20:45:38 => [Info] CV and JD # 4 keyword #15 match= Skills
+05/17/2021 20:45:39 => [Info] CV and JD # 4 keyword #16 match= Team
+05/17/2021 20:45:40 => [Info] CV and JD # 4 keyword #17 match= Player
+05/17/2021 20:45:40 => [Info] JD not match
+05/17/2021 20:45:41 => [Info] CV and JD # 4 keyword #19 match= Team
+05/17/2021 20:45:41 => [Info] CV and JD # 4 keyword #20 match= R
+05/17/2021 20:45:42 => [Info] CV and JD # 4 keyword #21 match= Mm
+05/17/2021 20:45:43 => [Info] CV and JD # 4 keyword #22 match= Le
+05/17/2021 20:45:44 => [Info] CV and JD # 4 keyword #23 match= skills
+05/17/2021 20:45:44 => [Info] CV and JD # 4 keyword #24 match= Visual
+05/17/2021 20:45:45 => [Info] CV and JD # 4 keyword #25 match= Basic
+05/17/2021 20:45:46 => [Info] CV and JD # 4 keyword #26 match= Analytical
+05/17/2021 20:45:46 => [Info] JD not match
+05/17/2021 20:45:47 => [Info] CV and JD # 4 keyword #28 match= skills
+05/17/2021 20:45:48 => [Info] JD not match
+05/17/2021 20:45:48 => [Info] JD not match
+05/17/2021 20:45:49 => [Info] CV and JD # 4 keyword #31 match= As
+05/17/2021 20:45:49 => [Info] CV and JD # 4 keyword #32 match= A
+05/17/2021 20:45:50 => [Info] CV and JD # 4 keyword #33 match= MS
+05/17/2021 20:45:51 => [Info] CV and JD # 4 keyword #34 match= R
+05/17/2021 20:45:51 => [Info] JD not match
+05/17/2021 20:45:52 => [Info] CV and JD # 4 keyword #36 match= application
+05/17/2021 20:45:53 => [Info] JD not match
+05/17/2021 20:45:53 => [Info] CV and JD # 4 keyword #38 match= Program
+05/17/2021 20:45:54 => [Info] JD not match
+05/17/2021 20:45:54 => [Info] JD not match
+
+05/17/2021 20:46:19 => [Info] CV and JD # 5 keyword #1 match= On
+05/17/2021 20:46:20 => [Info] JD not match
+05/17/2021 20:46:21 => [Info] CV and JD # 5 keyword #3 match= C#
+05/17/2021 20:46:21 => [Info] JD not match
+05/17/2021 20:46:22 => [Info] JD not match
+05/17/2021 20:46:22 => [Info] JD not match
+05/17/2021 20:46:23 => [Info] JD not match
+05/17/2021 20:46:23 => [Info] JD not match
+05/17/2021 20:46:24 => [Info] CV and JD # 5 keyword #9 match= E
+05/17/2021 20:46:24 => [Info] JD not match
+05/17/2021 20:46:25 => [Info] JD not match
+05/17/2021 20:46:25 => [Info] JD not match
+05/17/2021 20:46:26 => [Info] CV and JD # 5 keyword #13 match= of
+05/17/2021 20:46:26 => [Info] JD not match
+05/17/2021 20:46:27 => [Info] JD not match
+05/17/2021 20:46:27 => [Info] CV and JD # 5 keyword #16 match= Team
+05/17/2021 20:46:28 => [Info] CV and JD # 5 keyword #17 match= Player
+05/17/2021 20:46:29 => [Info] JD not match
+05/17/2021 20:46:30 => [Info] CV and JD # 5 keyword #19 match= Team
+05/17/2021 20:46:30 => [Info] CV and JD # 5 keyword #20 match= R
+05/17/2021 20:46:31 => [Info] CV and JD # 5 keyword #21 match= Mm
+05/17/2021 20:46:31 => [Info] CV and JD # 5 keyword #22 match= Le
+05/17/2021 20:46:32 => [Info] JD not match
+05/17/2021 20:46:32 => [Info] JD not match
+05/17/2021 20:46:33 => [Info] JD not match
+05/17/2021 20:46:33 => [Info] JD not match
+05/17/2021 20:46:33 => [Info] JD not match
+05/17/2021 20:46:34 => [Info] JD not match
+05/17/2021 20:46:34 => [Info] JD not match
+05/17/2021 20:46:35 => [Info] JD not match
+05/17/2021 20:46:35 => [Info] CV and JD # 5 keyword #31 match= As
+05/17/2021 20:46:36 => [Info] CV and JD # 5 keyword #32 match= A
+05/17/2021 20:46:36 => [Info] JD not match
+05/17/2021 20:46:37 => [Info] CV and JD # 5 keyword #34 match= R
+05/17/2021 20:46:37 => [Info] CV and JD # 5 keyword #35 match= Programming
+05/17/2021 20:46:38 => [Info] JD not match
+05/17/2021 20:46:38 => [Info] JD not match
+05/17/2021 20:46:39 => [Info] CV and JD # 5 keyword #38 match= Program
+05/17/2021 20:46:39 => [Info] JD not match
+05/17/2021 20:46:40 => [Info] JD not match
+
+05/17/2021 20:47:02 => [Info] CV and JD # 6 keyword #1 match= On
+05/17/2021 20:47:02 => [Info] CV and JD # 6 keyword #2 match= time
+05/17/2021 20:47:03 => [Info] JD not match
+05/17/2021 20:47:03 => [Info] CV and JD # 6 keyword #4 match= management
+05/17/2021 20:47:04 => [Info] JD not match
+05/17/2021 20:47:04 => [Info] JD not match
+05/17/2021 20:47:05 => [Info] JD not match
+05/17/2021 20:47:05 => [Info] CV and JD # 6 keyword #8 match= Management
+05/17/2021 20:47:06 => [Info] CV and JD # 6 keyword #9 match= E
+05/17/2021 20:47:06 => [Info] JD not match
+05/17/2021 20:47:07 => [Info] CV and JD # 6 keyword #11 match= Management
+05/17/2021 20:47:07 => [Info] JD not match
+05/17/2021 20:47:08 => [Info] CV and JD # 6 keyword #13 match= of
+05/17/2021 20:47:08 => [Info] JD not match
+05/17/2021 20:47:09 => [Info] CV and JD # 6 keyword #15 match= Skills
+05/17/2021 20:47:09 => [Info] CV and JD # 6 keyword #16 match= Team
+05/17/2021 20:47:10 => [Info] JD not match
+05/17/2021 20:47:10 => [Info] JD not match
+05/17/2021 20:47:11 => [Info] CV and JD # 6 keyword #19 match= Team
+05/17/2021 20:47:11 => [Info] CV and JD # 6 keyword #20 match= R
+05/17/2021 20:47:12 => [Info] CV and JD # 6 keyword #21 match= Mm
+05/17/2021 20:47:13 => [Info] CV and JD # 6 keyword #22 match= Le
+05/17/2021 20:47:13 => [Info] CV and JD # 6 keyword #23 match= skills
+05/17/2021 20:47:14 => [Info] JD not match
+05/17/2021 20:47:14 => [Info] JD not match
+05/17/2021 20:47:15 => [Info] CV and JD # 6 keyword #26 match= Analytical
+05/17/2021 20:47:15 => [Info] JD not match
+05/17/2021 20:47:16 => [Info] CV and JD # 6 keyword #28 match= skills
+05/17/2021 20:47:16 => [Info] JD not match
+05/17/2021 20:47:17 => [Info] JD not match
+05/17/2021 20:47:17 => [Info] CV and JD # 6 keyword #31 match= As
+05/17/2021 20:47:18 => [Info] CV and JD # 6 keyword #32 match= A
+05/17/2021 20:47:19 => [Info] CV and JD # 6 keyword #33 match= MS
+05/17/2021 20:47:19 => [Info] CV and JD # 6 keyword #34 match= R
+05/17/2021 20:47:20 => [Info] JD not match
+05/17/2021 20:47:20 => [Info] JD not match
+05/17/2021 20:47:21 => [Info] JD not match
+05/17/2021 20:47:21 => [Info] JD not match
+05/17/2021 20:47:21 => [Info] JD not match
+05/17/2021 20:47:22 => [Info] JD not match
+
+05/17/2021 20:47:43 => [Info] CV and JD # 7 keyword #0 match= Office
+05/17/2021 20:47:44 => [Info] CV and JD # 7 keyword #1 match= On
+05/17/2021 20:47:44 => [Info] JD not match
+05/17/2021 20:47:45 => [Info] JD not match
+05/17/2021 20:47:45 => [Info] JD not match
+05/17/2021 20:47:46 => [Info] JD not match
+05/17/2021 20:47:46 => [Info] JD not match
+05/17/2021 20:47:46 => [Info] JD not match
+05/17/2021 20:47:47 => [Info] JD not match
+05/17/2021 20:47:47 => [Info] CV and JD # 7 keyword #9 match= E
+05/17/2021 20:47:48 => [Info] JD not match
+05/17/2021 20:47:48 => [Info] JD not match
+05/17/2021 20:47:49 => [Info] JD not match
+05/17/2021 20:47:49 => [Info] CV and JD # 7 keyword #13 match= of
+05/17/2021 20:47:50 => [Info] JD not match
+05/17/2021 20:47:50 => [Info] CV and JD # 7 keyword #15 match= Skills
+05/17/2021 20:47:51 => [Info] CV and JD # 7 keyword #16 match= Team
+05/17/2021 20:47:51 => [Info] JD not match
+05/17/2021 20:47:52 => [Info] JD not match
+05/17/2021 20:47:52 => [Info] CV and JD # 7 keyword #19 match= Team
+05/17/2021 20:47:53 => [Info] CV and JD # 7 keyword #20 match= R
+05/17/2021 20:47:53 => [Info] JD not match
+05/17/2021 20:47:54 => [Info] CV and JD # 7 keyword #22 match= Le
+05/17/2021 20:47:54 => [Info] CV and JD # 7 keyword #23 match= skills
+05/17/2021 20:47:55 => [Info] JD not match
+05/17/2021 20:47:55 => [Info] CV and JD # 7 keyword #25 match= Basic
+05/17/2021 20:47:56 => [Info] JD not match
+05/17/2021 20:47:56 => [Info] JD not match
+05/17/2021 20:47:57 => [Info] CV and JD # 7 keyword #28 match= skills
+05/17/2021 20:47:57 => [Info] JD not match
+05/17/2021 20:47:58 => [Info] JD not match
+05/17/2021 20:47:58 => [Info] CV and JD # 7 keyword #31 match= As
+05/17/2021 20:47:59 => [Info] CV and JD # 7 keyword #32 match= A
+05/17/2021 20:47:59 => [Info] CV and JD # 7 keyword #33 match= MS
+05/17/2021 20:48:00 => [Info] CV and JD # 7 keyword #34 match= R
+05/17/2021 20:48:01 => [Info] JD not match
+05/17/2021 20:48:01 => [Info] JD not match
+05/17/2021 20:48:01 => [Info] JD not match
+05/17/2021 20:48:02 => [Info] JD not match
+05/17/2021 20:48:02 => [Info] JD not match
+05/17/2021 20:48:03 => [Info] JD not match
+
+05/17/2021 20:48:25 => [Info] CV and JD # 8 keyword #1 match= On
+05/17/2021 20:48:25 => [Info] JD not match
+05/17/2021 20:48:26 => [Info] JD not match
+05/17/2021 20:48:26 => [Info] JD not match
+05/17/2021 20:48:26 => [Info] CV and JD # 8 keyword #5 match= Python
+05/17/2021 20:48:27 => [Info] CV and JD # 8 keyword #6 match= Python
+05/17/2021 20:48:28 => [Info] JD not match
+05/17/2021 20:48:28 => [Info] JD not match
+05/17/2021 20:48:28 => [Info] CV and JD # 8 keyword #9 match= E
+05/17/2021 20:48:29 => [Info] JD not match
+05/17/2021 20:48:29 => [Info] JD not match
+05/17/2021 20:48:30 => [Info] CV and JD # 8 keyword #12 match= Design
+05/17/2021 20:48:31 => [Info] CV and JD # 8 keyword #13 match= of
+05/17/2021 20:48:31 => [Info] JD not match
+05/17/2021 20:48:32 => [Info] CV and JD # 8 keyword #15 match= Skills
+05/17/2021 20:48:32 => [Info] JD not match
+05/17/2021 20:48:32 => [Info] JD not match
+05/17/2021 20:48:33 => [Info] CV and JD # 8 keyword #18 match= design
+05/17/2021 20:48:34 => [Info] JD not match
+05/17/2021 20:48:34 => [Info] CV and JD # 8 keyword #20 match= R
+05/17/2021 20:48:35 => [Info] CV and JD # 8 keyword #21 match= Mm
+05/17/2021 20:48:35 => [Info] CV and JD # 8 keyword #22 match= Le
+05/17/2021 20:48:36 => [Info] CV and JD # 8 keyword #23 match= skills
+05/17/2021 20:48:36 => [Info] CV and JD # 8 keyword #24 match= Visual
+05/17/2021 20:48:37 => [Info] JD not match
+05/17/2021 20:48:37 => [Info] JD not match
+05/17/2021 20:48:38 => [Info] JD not match
+05/17/2021 20:48:38 => [Info] CV and JD # 8 keyword #28 match= skills
+05/17/2021 20:48:39 => [Info] JD not match
+05/17/2021 20:48:39 => [Info] JD not match
+05/17/2021 20:48:40 => [Info] CV and JD # 8 keyword #31 match= As
+05/17/2021 20:48:40 => [Info] CV and JD # 8 keyword #32 match= A
+05/17/2021 20:48:41 => [Info] CV and JD # 8 keyword #33 match= MS
+05/17/2021 20:48:41 => [Info] CV and JD # 8 keyword #34 match= R
+05/17/2021 20:48:42 => [Info] CV and JD # 8 keyword #35 match= Programming
+05/17/2021 20:48:43 => [Info] JD not match
+05/17/2021 20:48:43 => [Info] JD not match
+05/17/2021 20:48:44 => [Info] CV and JD # 8 keyword #38 match= Program
+05/17/2021 20:48:44 => [Info] JD not match
+05/17/2021 20:48:44 => [Info] JD not match
+
+05/17/2021 20:49:07 => [Info] CV and JD # 9 keyword #1 match= On
+05/17/2021 20:49:07 => [Info] CV and JD # 9 keyword #2 match= time
+05/17/2021 20:49:08 => [Info] JD not match
+05/17/2021 20:49:08 => [Info] JD not match
+05/17/2021 20:49:09 => [Info] CV and JD # 9 keyword #5 match= Python
+05/17/2021 20:49:09 => [Info] CV and JD # 9 keyword #6 match= Python
+05/17/2021 20:49:10 => [Info] JD not match
+05/17/2021 20:49:10 => [Info] JD not match
+05/17/2021 20:49:11 => [Info] CV and JD # 9 keyword #9 match= E
+05/17/2021 20:49:11 => [Info] JD not match
+05/17/2021 20:49:12 => [Info] JD not match
+05/17/2021 20:49:12 => [Info] JD not match
+05/17/2021 20:49:13 => [Info] CV and JD # 9 keyword #13 match= of
+05/17/2021 20:49:13 => [Info] JD not match
+05/17/2021 20:49:14 => [Info] CV and JD # 9 keyword #15 match= Skills
+05/17/2021 20:49:14 => [Info] JD not match
+05/17/2021 20:49:14 => [Info] JD not match
+05/17/2021 20:49:15 => [Info] JD not match
+05/17/2021 20:49:15 => [Info] JD not match
+05/17/2021 20:49:16 => [Info] CV and JD # 9 keyword #20 match= R
+05/17/2021 20:49:16 => [Info] CV and JD # 9 keyword #21 match= Mm
+05/17/2021 20:49:17 => [Info] CV and JD # 9 keyword #22 match= Le
+05/17/2021 20:49:18 => [Info] CV and JD # 9 keyword #23 match= skills
+05/17/2021 20:49:18 => [Info] CV and JD # 9 keyword #24 match= Visual
+05/17/2021 20:49:19 => [Info] JD not match
+05/17/2021 20:49:19 => [Info] JD not match
+05/17/2021 20:49:20 => [Info] JD not match
+05/17/2021 20:49:20 => [Info] CV and JD # 9 keyword #28 match= skills
+05/17/2021 20:49:21 => [Info] JD not match
+05/17/2021 20:49:21 => [Info] JD not match
+05/17/2021 20:49:21 => [Info] CV and JD # 9 keyword #31 match= As
+05/17/2021 20:49:22 => [Info] CV and JD # 9 keyword #32 match= A
+05/17/2021 20:49:23 => [Info] JD not match
+05/17/2021 20:49:23 => [Info] CV and JD # 9 keyword #34 match= R
+05/17/2021 20:49:24 => [Info] CV and JD # 9 keyword #35 match= Programming
+05/17/2021 20:49:24 => [Info] JD not match
+05/17/2021 20:49:25 => [Info] JD not match
+05/17/2021 20:49:25 => [Info] CV and JD # 9 keyword #38 match= Program
+05/17/2021 20:49:26 => [Info] JD not match
+05/17/2021 20:49:26 => [Info] JD not match
+
+05/17/2021 20:49:48 => [Debug] number of match = 551
+05/17/2021 20:49:48 => [Info] Matching execution ended in: 00:47:05
