@@ -1,5 +1,5 @@
-diploma electronics engineering
-\w* in (engineering|\w* engineering)
+education
+[ao]\Wlevel|advance diploma|bachelor's |doctorate |graduate |higher |masters|master's |post |professional |psle|\w* in (engineering|\w* engineering)
 
 experience 
 [mM]inimal|[mM]inimum|[aA]t least |\d\d? |(to \d\d? )|-\d\d? |years of |experience |\w* experience|in \w*

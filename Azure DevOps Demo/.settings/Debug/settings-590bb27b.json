@@ -11,7 +11,7 @@
   "UiPath.UiAutomation.Activities.GoogleOCR.DeniedCharacters": "",
   "UiPath.UiAutomation.Activities.GoogleOCR.Invert": "False",
   "UiPath.UiAutomation.Activities.GoogleOCR.Profile": "Legacy",
-  "UiPath.UiAutomation.Activities.GoogleOCR.Scale": "2",
+  "UiPath.UiAutomation.Activities.GoogleOCR.Scale": "1",
   "UiPath.UiAutomation.Activities.GoogleOCR.Language": "eng",
   "UiPath.UiAutomation.Activities.MicrosoftOCR.Profile": "Legacy",
   "UiPath.UiAutomation.Activities.MicrosoftOCR.Scale": "1",
@@ -19,8 +19,5 @@
   "UiPath.UiAutomation.Activities.MicrosoftAzureComputerVisionOCR.ApiKey": "",
   "UiPath.UiAutomation.Activities.MicrosoftAzureComputerVisionOCR.Endpoint": "",
   "UiPath.UiAutomation.Activities.MicrosoftAzureComputerVisionOCR.Scale": "1",
-  "UiPath.UiAutomation.Activities.MicrosoftAzureComputerVisionOCR.Language": "AutoDetect",
-  "UiPath.OmniPage.Activities.OmniPageOCR.Scale": "1",
-  "UiPath.OmniPage.Activities.OmniPageOCR.Language": "",
-  "UiPath.OmniPage.Activities.OmniPageOCR.Profile": "None"
+  "UiPath.UiAutomation.Activities.MicrosoftAzureComputerVisionOCR.Language": "AutoDetect"
 }

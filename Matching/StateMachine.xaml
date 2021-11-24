@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="read settings from template.  user can choose to use Targetted keywords search or Field Specialization keyword search" DisplayName="State: Initialise" sap:VirtualizedContainerService.HintSize="272.8,121.6" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="read settings from template.  user can choose to use Targetted keywords search or let Automation read all the CVs in a folder to determine the Field Specialization" DisplayName="State: Initialise" sap:VirtualizedContainerService.HintSize="272.8,137.6" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
         <Sequence sap:VirtualizedContainerService.HintSize="836,1195.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
@@ -223,7 +223,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">3.59999999999999,119.2</av:Point>
-          <av:Size x:Key="ShapeSize">272.8,121.6</av:Size>
+          <av:Size x:Key="ShapeSize">272.8,137.6</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Double x:Key="StateContainerWidth">239.16542084352733</x:Double>
@@ -234,15 +234,15 @@
         <Transition DisplayName="Open resume " sap:VirtualizedContainerService.HintSize="448.8,509.6" sap2010:WorkflowViewState.IdRef="Transition_17">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">276.4,143.52 306.4,143.52 306.4,95.68 521.2,95.68</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">276.4,146.72 306.4,146.72 306.4,95.68 521.2,95.68</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">12</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">21</x:Int32>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="extract field of specialization from resume ie Electronics Engineerin / Software Engineering etc" DisplayName="State: Search By Field" sap:VirtualizedContainerService.HintSize="277.6,121.6" sap2010:WorkflowViewState.IdRef="State_9">
+            <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="extract field of specialization from resume ie Electronics Engineerin / Software Engineering etc" DisplayName="State: Search By Field" sap:VirtualizedContainerService.HintSize="991.2,3973.6" sap2010:WorkflowViewState.IdRef="State_9">
               <State.Entry>
-                <Sequence sap:VirtualizedContainerService.HintSize="946.4,3580" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <Sequence sap:VirtualizedContainerService.HintSize="946.4,3580.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="readText" />
                     <Variable x:TypeArguments="sd:DataTable" Name="fieldKeywordDT" />
@@ -254,7 +254,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="904.8,75.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="need to provide means to read PDF resume too.&#xA;check file extension + IF " />
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="904.8,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="need to provide means to read PDF resume too.&#xA;check file extension + IF " />
                   <p:WordApplicationScope sap2010:Annotation.AnnotationText="open resume document" DisplayName="Word Application Scope" FilePath="C:\Users\xiaod\Documents\Test Resume.docx" sap:VirtualizedContainerService.HintSize="904.8,350.4" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
                     <p:WordApplicationScope.Body>
                       <ActivityAction x:TypeArguments="ui:WordDocument">
@@ -1942,7 +1942,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">11</x:Int32>
-              <av:PointCollection x:Key="ConnectorLocation">276.4,180 306.4,180 306.4,192.9 1162.88,192.9 1162.88,132.9</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">276.4,188 1162.88,188 1162.88,132.9</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>

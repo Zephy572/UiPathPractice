@@ -1,10 +1,12 @@
 {
   "name": "Matching",
   "description": "search multiple job portals to match job description with CV ",
-  "main": "matchCvJD.xaml",
+  "main": "dataScrapeJobStreet.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.IntelligentOCR.Activities": "[4.14.1-preview]",
     "UiPath.Mail.Activities": "[1.10.4]",
+    "UiPath.OmniPage.Activities": "[1.7.1]",
     "UiPath.System.Activities": "[21.4.0]",
     "UiPath.UIAutomation.Activities": "[21.4.3]",
     "UiPath.Word.Activities": "[1.6.4]"
@@ -74,12 +76,6 @@
       "output": []
     },
     {
-      "filePath": "skillKeywordScrape.xaml",
-      "uniqueId": "053d9f00-e25e-4a3f-b4d8-4c9671181ff3",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "matchCvJD.xaml",
       "uniqueId": "9c41c85d-5919-4bcc-93b2-86c745f29de3",
       "input": [],
@@ -88,6 +84,12 @@
     {
       "filePath": "Build CV keyword List.xaml",
       "uniqueId": "f047754c-6d51-46e0-9438-3fd9ee2487eb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "skillKeywordScrapeMonster.xaml",
+      "uniqueId": "0ad11053-bf26-4217-8283-2133aad738f6",
       "input": [],
       "output": []
     }
